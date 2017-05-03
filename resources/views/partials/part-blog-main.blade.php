@@ -1,7 +1,3 @@
-<!-- * Created by IntelliJ IDEA.-->
-<!-- * User: Леся-->
-<!-- * Date: 06.03.2017-->
-<!-- * Time: 13:19-->
 
 <div class=" topmargin-sm bottommargin-sm notopborder">
     <div class="container clearfix">

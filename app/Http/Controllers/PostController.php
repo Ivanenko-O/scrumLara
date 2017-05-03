@@ -8,21 +8,21 @@
 namespace App\Http\Controllers;
 
 
-//class PostController extends \App\Http\Controllers\Controller
-//
-//{
-//    public function show()
-//    {
-//        $slug = request()->segment(1);
-//        $post = \TCG\Voyager\Models\Post::where('slug', $slug)->firstorFail();
-//
-//        return view('show-post', [
-//            'post' => $post,
-//        ]);
-//    }
-//}
+use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Models\Post;
 
-class PagesController extends Controller {
 
-//    public function
+class PostController extends \App\Http\Controllers\Controller
+
+{
+    public function show()
+    {
+        $slug = request()->segment(1);
+        $post = \TCG\Voyager\Models\Post::where('slug', $slug)->firstorFail();
+
+        return view('pages.posts.show-post', [
+            'post' => $post,
+        ]);
+    }
 }
+

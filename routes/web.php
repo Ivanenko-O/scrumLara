@@ -61,14 +61,17 @@ Route::get('/andriipavlenko', function() {
 Route::get('/404', function() {
     return view('pages.404.404');
 });
+
 //
 //Route::get('/contact', function() {
 //    return view('pages.contact.contact');
 //});
+Route::get('contact', 'PagesController@getContact');
 
 Route::get('/eventlist', function() {
     return view('pages.eventlist.eventlist');
 });
+
 
 
 Route::get('/blog', function() {
@@ -80,21 +83,21 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-//try {
-//    $posts = \TCG\Voyager\Models\Post::all();
-//
-//    foreach ($posts as $post) {
-//        Route::get($post->slug, 'PostController@show');
-//    }
-//} catch (\Exception $exception) {
-//
-//}
+try {
+    $posts = \TCG\Voyager\Models\Post::all();
+
+    foreach ($posts as $post) {
+        Route::get($post->slug, 'PostController@show');
+    }
+} catch (\Exception $exception) {
+
+}
 
 //Route::get('/blog{slug}', function() {
 //    return view('pages.blog.post');
 //});
 
 
-Route::get('contact', 'PagesController@getContact');
+
 
 
