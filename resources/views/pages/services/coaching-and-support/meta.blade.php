@@ -1,0 +1,2 @@
+<meta name="description" content="Коучинг Менеджмента. Коучинг команд. Коучинг Scrum ролей. Коучинг по техническим практикам. Личный коучинг. Настройка Agile в компаниях.">
+<meta name="author" content="Andrii Pavlenko"/>
