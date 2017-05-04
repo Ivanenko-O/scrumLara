@@ -33,8 +33,34 @@
                         </div>
                     </div>
                 </div>
+
+                {{-- Sidebar --}}
+                <div class="sidebar nobottommargin col_last clearfix">
+                    <div class="sidebar-widgets-wrap">
+
+                        <div class="widget clearfix">
+
+                            <div class="tabs nobottommargin clearfix" id="sidebar-tabs">
+                                <ul class="tab-nav clearfix">
+                                    <li><a href="#tabs-1">Статьи</a></li>
+                                    <li><a href="#tabs-2">Наша жизнь</a></li>
+                                </ul>
+
+                                <div class="tab-container">
+                                    @include("partials.right-widget-blog")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            {{-- .sidebar end --}}
+            </div>
+
+
         </div>
     </section>
 
 @endsection
+
