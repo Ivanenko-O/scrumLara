@@ -89,6 +89,20 @@
 	background-color: #fff;
 	vertical-align: middle;
 }
+.auth {
+	position: absolute;
+	left: 60px;
+}
+
+.auth a {
+	padding: 0 12px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	height: 44px;
+	color: #666;
+	border-right: 1px solid #EEE;
+}
 
 .middle {
 	position: absolute;

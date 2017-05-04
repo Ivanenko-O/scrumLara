@@ -23,6 +23,7 @@
 <body class="stretched">
 <div id="wrapper" class="clearfix">
 
+
     @include("partials.top-bar")
     @include("partials.header")
 
