@@ -30,7 +30,6 @@
 
                             <?php echo $post->body; ?>
 
-                        </div>
                     </div>
                 </div>
 
@@ -48,6 +47,7 @@
 
                                 <div class="tab-container">
                                     @include("partials.right-widget-blog")
+                                    @include("partials.right-widget-subscribing")
                                 </div>
                             </div>
                         </div>

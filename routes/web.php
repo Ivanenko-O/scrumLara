@@ -36,6 +36,13 @@ Route::get('/andriipavlenko', function() {
     return view('pages.about.andriipavlenko.andriipavlenko');
 });
 
+Route::get('/404', function() {
+    return view('pages.404.404');
+});
+
+Route::get('/eventlist', function() {
+    return view('pages.eventlist.eventlist');
+});
 
 //Route::get('/services/analysis-and-implementation', function() {
 //    return view('pages.services.analysis-and-implementation.analysis-and-implementation');
@@ -57,32 +64,16 @@ Route::get('/andriipavlenko', function() {
 //    return view('pages.about.andriipavlenko.andriipavlenko');
 //});
 
-
-Route::get('/404', function() {
-    return view('pages.404.404');
-});
-
 //
 //Route::get('/contact', function() {
 //    return view('pages.contact.contact');
 //});
+
 Route::get('contact', 'PagesController@getContact');
-
-Route::get('/eventlist', function() {
-    return view('pages.eventlist.eventlist');
-});
+Route::get('blog', 'PagesController@getBlog');
 
 
-
-Route::get('/blog', function() {
-    return view('pages.blog.blog');
-});
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
+//Route for posts
 try {
     $posts = \TCG\Voyager\Models\Post::all();
 
@@ -93,15 +84,13 @@ try {
 
 }
 
-//Route::get('/blog{slug}', function() {
-//    return view('pages.blog.post');
-//});
 
 
-
-
+//Route for admin panel
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
