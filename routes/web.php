@@ -1,8 +1,9 @@
 <?php
 
-Route::get('/', function () {
-    return view('pages.home.home');
-});
+Route::get('/', 'PagesController@getHome');
+Route::get('contact', 'PagesController@getContact');
+Route::get('blog', 'PagesController@getBlog');
+
 
 Route::get('/scrum0', function() {
     return view('pages.scrum0.scrum0');
@@ -69,8 +70,6 @@ Route::get('/eventlist', function() {
 //    return view('pages.contact.contact');
 //});
 
-Route::get('contact', 'PagesController@getContact');
-Route::get('blog', 'PagesController@getBlog');
 
 
 //Route for posts

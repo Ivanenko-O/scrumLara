@@ -7,8 +7,6 @@
  */
 namespace App\Http\Controllers;
 
-
-
 class PagesController extends Controller {
 
     public function getAbout() {
@@ -22,4 +20,10 @@ class PagesController extends Controller {
     public function getContact() {
         return view('pages.contact.contact');
     }
+
+    public function getHome() {
+
+        return view('pages.home.home');
+    }
 }
+

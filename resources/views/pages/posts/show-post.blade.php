@@ -30,7 +30,9 @@
 
                             <?php echo $post->body; ?>
 
+                        </div>
                     </div>
+
                 </div>
 
                 {{-- Sidebar --}}
@@ -56,10 +58,10 @@
 
             </div>
             {{-- .sidebar end --}}
-            </div>
-
+        </div>
 
         </div>
+
     </section>
 
 @endsection

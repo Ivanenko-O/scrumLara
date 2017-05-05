@@ -18,11 +18,16 @@ class PostController extends \App\Http\Controllers\Controller
     public function show()
     {
         $slug = request()->segment(1);
-        $post = \TCG\Voyager\Models\Post::where('slug', $slug)->firstorFail();
+        $post = \TCG\Voyager\Models\Post::where('slug', $slug)->first();
 
         return view('pages.posts.show-post', [
             'post' => $post,
         ]);
+    }
+
+    public function showAll()
+    {
+        $posts = \TCG\Voyager\Models\Post::all();
     }
 }
 
