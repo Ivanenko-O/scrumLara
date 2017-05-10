@@ -11,7 +11,7 @@
             </div>
             <div class="entry-c">
                 <div class="entry-title">
-                    <h4><a href="blog/what-is-management30"><?php echo $post->title; ?></a></h4>
+                    <h4><a href="blog/what-is-management30"></a></h4>
                 </div>
                 <ul class="entry-meta">
                     <li><i class="icon-calendar"></i> 27 март 2017</li>

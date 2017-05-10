@@ -31,7 +31,7 @@ class Post extends Model
 
     public function authorId()
     {
-        return $this->belongsTo(Voyager::modelClass('User'), 'author_id', 'id');
+        return $this->belongsTo(Voyager::modelClass('User'), 'author_id', 'id', 'name');
     }
 
     /**
@@ -51,6 +51,8 @@ class Post extends Model
      */
     public function category()
     {
-        return $this->hasOne(Voyager::modelClass('Category'), 'id', 'category_id');
+        return $this->hasOne(Voyager::modelClass('Category'), 'id', 'category_id', 'name');
     }
+
 }
+
