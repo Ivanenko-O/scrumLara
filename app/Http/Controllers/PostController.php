@@ -30,15 +30,12 @@ class PostController extends \App\Http\Controllers\Controller
     {
         $posts = \TCG\Voyager\Models\Post::all();
     }
-//
-//    public function getCategories()
-//    {
-//        $categories = \TCG\Voyager\Models\Category::all();
-//    }
 
-//    public function showAuthor()
-//    {
-//        $author_name =
-//    }
+    public function getCategories()
+    {
+        $categories = \TCG\Voyager\Models\Category::all();
+    }
+
+
 }
 

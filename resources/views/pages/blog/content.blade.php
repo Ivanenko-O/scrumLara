@@ -13,6 +13,13 @@
 </section>{{-- #page-title end --}}
 
 {{-- Content --}}
+
+@foreach( $categories as $category)
+
+   {{$category->id}} m{{$category->title}}
+
+    @endforeach
+
 <section id="content">
 
     <div class="content-wrap">
@@ -418,4 +425,5 @@
 
     </div>
 
-</section>{{-- #content end --}}
+</section>
+{{-- #content end --}}

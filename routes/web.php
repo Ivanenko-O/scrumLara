@@ -2,7 +2,7 @@
 
 Route::get('/', 'PagesController@getHome');
 Route::get('contact', 'PagesController@getContact');
-Route::get('blog', 'PagesController@getBlog');
+Route::get('blog', 'BlogController@index');
 
 
 Route::get('/scrum0', function() {
@@ -83,7 +83,10 @@ try {
 
 }
 
-
+Route::get('/install', function () {
+    Artisan::run('storage:link');
+    return redirect('/?done');
+});
 
 //Route for admin panel
 Route::group(['prefix' => 'admin'], function () {

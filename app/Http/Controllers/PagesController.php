@@ -14,10 +14,6 @@ class PagesController extends Controller {
 
     }
 
-    public function getBlog() {
-        return view('pages.blog.blog');
-    }
-
     public function getContact() {
         return view('pages.contact.contact');
     }

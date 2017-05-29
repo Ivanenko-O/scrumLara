@@ -1,9 +1,12 @@
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
-        Options -MultiViews
+        #Options -MultiViews
     </IfModule>
 
     RewriteEngine On
+
+    #enable symbolic links
+    #Options +FollowSymLinks
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
