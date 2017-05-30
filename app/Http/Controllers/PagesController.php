@@ -22,5 +22,36 @@ class PagesController extends Controller {
 
         return view('pages.home.home');
     }
+
+    public function getScrum0() {
+
+        return view('pages.scrum0.scrum0');
+    }
+
+    public function getMasterScrum() {
+
+        return view('pages.master-of-scrum.master-of-scrum');
+    }
+
+    public function getManagement30() {
+
+        return view('pages.management30.management30');
+    }
+
+    public function getEventlist() {
+
+        return view('pages.eventlist.eventlist');
+    }
+
+    public function getAndriipavlenko() {
+
+        return view('pages.about.andriipavlenko.andriipavlenko');
+    }
+
+    public function getAboutus() {
+
+        return view('pages.about.aboutus.aboutus');
+    }
+
 }
 

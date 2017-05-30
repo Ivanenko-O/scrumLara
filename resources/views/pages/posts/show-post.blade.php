@@ -5,7 +5,7 @@
     {{--Page Title --}}
     <section id="page-title">
         <div class="container clearfix">
-            <h1> {{ $post->title }} </h1>
+            <h1> {{ $post-> title }} </h1>
             <ol class="breadcrumb">
                 <li><a href="">Главная</a></li>
                 <li><a href="blog">Блог</a></li>
@@ -31,7 +31,7 @@
 
                             <!-- Entry Meta -->
                             <ul class="entry-meta clearfix">
-                                <li><i class="icon-calendar3"></i> 01 Март 2017</li>
+                                <li><i class="icon-calendar3"></i><?php echo $post -> created_at ->format(' j M y') ?></li>
                                 <li><a href="andriipavlenko"><i class="icon-user"> <?php echo  $post -> authorId -> name ?></i></a>
                                 <li><a href="andriipavlenko"><i class="icon-folder"> <?php echo  $post -> category -> name ?></i></a>
                                 </li>

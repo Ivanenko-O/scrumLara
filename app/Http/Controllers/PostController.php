@@ -26,9 +26,10 @@ class PostController extends \App\Http\Controllers\Controller
         ]);
     }
 
-    public function showAll()
-    {
-        $posts = \TCG\Voyager\Models\Post::all();
+    public function showAll(){
+
+        $posts = Post::orderBy('created_at', 'exerpt')->limit(10)->get();
+        return view('pages.blog.blog')->withPosts($posts);
     }
 
     public function getCategories()

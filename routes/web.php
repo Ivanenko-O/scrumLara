@@ -1,21 +1,16 @@
 <?php
 
+Route::get('blog', 'PostController@showAll');
 Route::get('/', 'PagesController@getHome');
 Route::get('contact', 'PagesController@getContact');
-Route::get('blog', 'BlogController@index');
+Route::get('scrum0', 'PagesController@getScrum0');
+Route::get('master-of-scrum', 'PagesController@getMasterScrum');
+Route::get('management30', 'PagesController@getManagement30');
+Route::get('eventlist', 'PagesController@getEventlist');
+Route::get('andriipavlenko', 'PagesController@getAndriipavlenko');
+Route::get('aboutus', 'PagesController@getAboutus');
 
 
-Route::get('/scrum0', function() {
-    return view('pages.scrum0.scrum0');
-});
-
-Route::get('/master-of-scrum', function() {
-    return view('pages.master-of-scrum.master-of-scrum');
-});
-
-Route::get('/management30', function() {
-    return view('pages.management30.management30');
-});
 
 Route::get('/analysis-and-implementation', function() {
     return view('pages.services.analysis-and-implementation.analysis-and-implementation');
@@ -29,21 +24,11 @@ Route::get('/corporate-study', function() {
     return view('pages.services.corporate-study.corporate-study');
 });
 
-Route::get('/aboutus', function() {
-    return view('pages.about.aboutus.aboutus');
-});
-
-Route::get('/andriipavlenko', function() {
-    return view('pages.about.andriipavlenko.andriipavlenko');
-});
 
 Route::get('/404', function() {
     return view('pages.404.404');
 });
 
-Route::get('/eventlist', function() {
-    return view('pages.eventlist.eventlist');
-});
 
 //Route::get('/services/analysis-and-implementation', function() {
 //    return view('pages.services.analysis-and-implementation.analysis-and-implementation');
