@@ -1,0 +1,2 @@
+<meta name="description" content="Высокоинтерактивный игровой тренинг об инструментах и практиках Agile для менеджеров, руководителей компаний, Scrum-мастеров">
+<meta name="author" content="Andrii Pavlenko"/>

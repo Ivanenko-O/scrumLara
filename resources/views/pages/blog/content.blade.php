@@ -32,10 +32,15 @@
                                 <div class="timeline-divider"></div>
                             </div>
                             <div class="entry-image">
-                                {{ $post -> image }}
+
+                                @if(!empty($post->image))
+                                    <a href="{{ url() }}"> <img src="{{ Voyager::image( $post->image ) }}" alt="{{ $post->title }}" width="800" height="600" /> </a>
+
+                                @endif
+
                             </div>
                             <div class="entry-title">
-                                <h2> {{ $post -> title }}</h2>
+{{--                                <a href="{{ route('pages.posts.show-post', $post->slug) }}" class="btn btn-primary"><h2> {{ $post -> title }}</h2></a>--}}
                             </div>
                             <ul class="entry-meta clearfix">
                                 <li><i class="icon-user"></i>{{ $post -> authorId -> name }}</li>

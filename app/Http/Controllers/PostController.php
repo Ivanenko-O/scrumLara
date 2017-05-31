@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
+use Intervention\Image\Image;
 
 
 class PostController extends \App\Http\Controllers\Controller
@@ -28,8 +29,11 @@ class PostController extends \App\Http\Controllers\Controller
 
     public function showAll(){
 
+
         $posts = Post::orderBy('created_at', 'exerpt')->limit(10)->get();
-        return view('pages.blog.blog')->withPosts($posts);
+
+            return view('pages.blog.blog')->withPosts($posts);
+
     }
 
     public function getCategories()

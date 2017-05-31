@@ -1,0 +1,2 @@
+<meta name="description" content="Мощная база для тех, кто в теме Scrum. Все основные инструменты Scrum. Полное понимание фреймворка для использования сразу после тренинга."/>
+<meta name="author" content="Andrii Pavlenko"/>
