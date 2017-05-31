@@ -34,7 +34,7 @@
                             <div class="entry-image">
 
                                 @if(!empty($post->image))
-                                    <a href="{{ url() }}"> <img src="{{ Voyager::image( $post->image ) }}" alt="{{ $post->title }}" width="800" height="600" /> </a>
+                                    <a href="{{ url($post -> slug) }}"> <img src="{{ Voyager::image( $post->image ) }}" alt="{{ $post->title }}" width="800" height="600" /> </a>
 
                                 @endif
 
