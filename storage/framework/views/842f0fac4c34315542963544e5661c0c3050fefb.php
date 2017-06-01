@@ -24,7 +24,6 @@
                  class="owl-carousel owl-carousel-full news-carousel header-stick nobottommargin carousel-widget"
                  data-margin="3" data-loop="true" data-stage-padding="50" data-pagi="false" data-items-xs="1"
                  data-items-lg="2">
-
                 <div class="oc-item">
                     <a href="blog/what-is-management30"><img src="images/what-is-management30-slider.jpg"
                                                              alt="what is Management30"></a>
@@ -32,6 +31,7 @@
                         <div class="text-overlay">
                             <span class="label label-default">Статьи</span>
                             <div class="text-overlay-title">
+
                                 <h2><span>Что такое Management30? История и описание</span></h2>
                             </div>
                             <a href="blog/what-is-management30"
@@ -190,7 +190,47 @@
         </div>
 
     </div>
-    <?php echo $__env->make('partials.part-blog-main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    
+
+    <div class=" topmargin-sm bottommargin-sm notopborder">
+        <div class="container clearfix">
+            <h2 class="divcenter nobottommargin font-body center" style="max-width: 700px; font-size: 40px;">
+                НАШИ <span>СТАТЬИ</span></h2>
+        </div>
+    </div>
+    <div class="container clear-bottommargin clearfix">
+        <div class="row bottommargin">
+
+            <?php $__currentLoopData = $global_posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+                <div class="col-md-4 col-sm-12 ">
+                    <div class="ipost clearfix">
+                        <div class="entry-image">
+                            <a href="<?php echo e(url($post -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $post->image )); ?>" alt="<?php echo e($post->title); ?>" /> </a>
+                        </div>
+                        <div class="entry-title">
+                            <h3><a href="<?php echo e(url($post -> slug)); ?>"><?php echo e($post->title); ?> </a></h3>
+                        </div>
+                        <ul class="entry-meta clearfix">
+                            <li><i class="icon-calendar3"></i> <?php echo e($post -> created_at->format(' j M y')); ?></li>
+                        </ul>
+                        <div class="entry-content">
+                            <?php echo e($post->excerpt); ?>
+
+                        </div>
+                    </div>
+                </div>
+
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <a href="blog"
+           class="button button-reveal button-border button-small button-rounded uppercase tright bottommargin"><span>Читать все статьи</span><i
+                    class="icon-angle-right"></i></a>
+
+
+    </div>
+
+
+
     <?php echo $__env->make("partials.part-articles-main", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 

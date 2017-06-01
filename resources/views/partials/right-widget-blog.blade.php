@@ -5,6 +5,7 @@
 
         <div class="spost clearfix">
             <div class="entry-image">
+
                 <a href="blog/what-is-management30" class="nobg"><img class="img-circle"
                                                                       src="images/blog/what-is-management30-title.jpg"
                                                                       alt=""></a>

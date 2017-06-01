@@ -47,12 +47,47 @@ class Post extends Model
     }
 
     /**
+     * Scope a query to only published posts.
+     *
+     * @param string $category
+     *
+     * @return array
+     */
+
+    public function getAllPublished()
+    {
+        return Post::where('status', 'PUBLISHED');
+    }
+
+    /**
+     * Scope a query to only published scopes.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+
+    public function  getLimitedAndSortedBy($limit, $category)
+    {
+        return $this -> getAllPublished()
+            -> with(['category_id' => function($query) {
+                $query->where('category_id', 'like', '%'.category_id.'%');
+            }])
+            -> orderBy('created_at', 'exerpt') -> limit($limit) -> get();
+    }
+
+
+
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function category()
     {
         return $this->hasOne(Voyager::modelClass('Category'), 'id', 'category_id', 'name');
     }
+
+
 
 }
 

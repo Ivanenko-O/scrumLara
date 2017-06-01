@@ -49,7 +49,7 @@
                             <div class="entry-content">
                             {{ $post -> excerpt }}
                             </div>
-
+                        </div>
 
 
                      @endforeach
@@ -60,6 +60,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 {{-- #content end --}}

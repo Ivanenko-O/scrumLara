@@ -51,7 +51,7 @@
                             <?php echo e($post -> excerpt); ?>
 
                             </div>
-
+                        </div>
 
 
                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -62,5 +62,7 @@
         </div>
     </div>
 </section>
+
+
 
 

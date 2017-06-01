@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use \TCG\Voyager\Models\Post as Post;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,9 +14,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+
+    public function boot(Post $posts)
     {
-        //
+        $posts = $posts -> getLimitedAndSortedBy(10, 1);
+        View::share('global_posts', $posts);
     }
 
     /**
