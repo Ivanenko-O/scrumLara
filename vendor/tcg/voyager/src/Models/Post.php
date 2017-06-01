@@ -70,8 +70,8 @@ class Post extends Model
     public function  getLimitedAndSortedBy($limit, $category)
     {
         return $this -> getAllPublished()
-            -> with(['category_id' => function($query) {
-                $query->where('category_id', 'like', '%'.category_id.'%');
+            -> with(['category' => function($query) {
+                $query->where('name', 'like', '%'.$category.'%');
             }])
             -> orderBy('created_at', 'exerpt') -> limit($limit) -> get();
     }
