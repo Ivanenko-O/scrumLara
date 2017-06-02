@@ -59,23 +59,20 @@ class Post extends Model
         return Post::where('status', 'PUBLISHED');
     }
 
-    /**
-     * Scope a query to only published scopes.
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     *
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-
-    public function  getLimitedAndSortedBy($limit, $category)
+    public function getByCategory($category)
     {
+//        $this -> category = $category;
         return $this -> getAllPublished()
-            -> with(['category' => function($query) {
-                $query->where('name', 'like', '%'.$category.'%');
-            }])
-            -> orderBy('created_at', 'exerpt') -> limit($limit) -> get();
+            -> with(['category' => function($query) use ($category) {
+                $query -> where('id', $category);
+            }]) ;
     }
 
+    public function getLimitedAndSortedBy($limit, $category)
+    {
+        return $this -> getByCategory($category)
+            -> orderBy('created_at', 'exerpt') -> take($limit) -> get();
+    }
 
 
 

@@ -17,8 +17,10 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(Post $posts)
     {
-        $posts = $posts -> getLimitedAndSortedBy(10, 'Наша жизнь');
-        View::share('global_posts', $posts);
+        $g_posts_category_1 = $posts -> getLimitedAndSortedBy(10, 1);
+        dd($posts -> getLimitedAndSortedBy(10, 1));
+
+        View::share('g_posts_category_1', $g_posts_category_1);
     }
 
     /**

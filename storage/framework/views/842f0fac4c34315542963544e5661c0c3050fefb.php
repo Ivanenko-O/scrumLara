@@ -201,21 +201,21 @@
     <div class="container clear-bottommargin clearfix">
         <div class="row bottommargin">
 
-            <?php $__currentLoopData = $global_posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php $__currentLoopData = $g_posts_category_1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $g_post_category_1): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                <div class="col-md-4 col-sm-12 ">
+                <div class="col-md-3 col-sm-12 ">
                     <div class="ipost clearfix">
                         <div class="entry-image">
-                            <a href="<?php echo e(url($post -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $post->image )); ?>" alt="<?php echo e($post->title); ?>" /> </a>
+                            <a href="<?php echo e(url($g_post_category_1 -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $g_post_category_1->image )); ?>" alt="<?php echo e($g_post_category_1->title); ?>" /> </a>
                         </div>
                         <div class="entry-title">
-                            <h3><a href="<?php echo e(url($post -> slug)); ?>"><?php echo e($post->title); ?> </a></h3>
+                            <h3><a href="<?php echo e(url($g_post_category_1 -> slug)); ?>"><?php echo e($g_post_category_1->title); ?> </a></h3>
                         </div>
                         <ul class="entry-meta clearfix">
-                            <li><i class="icon-calendar3"></i> <?php echo e($post -> created_at->format(' j M y')); ?></li>
+                            <li><i class="icon-calendar3"></i> <?php echo e($g_post_category_1 -> created_at->format(' j M y')); ?></li>
                         </ul>
                         <div class="entry-content">
-                            <?php echo e($post->excerpt); ?>
+                            <?php echo e($g_post_category_1->excerpt); ?>
 
                         </div>
                     </div>

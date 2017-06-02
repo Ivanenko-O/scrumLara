@@ -41,7 +41,8 @@
 
                             </div>
                             <div class="entry-title">
-
+                                <h2> <a href="<?php echo e(url($post -> slug)); ?>"> <?php echo e($post->title); ?> </a></h2>
+                                
                             </div>
                             <ul class="entry-meta clearfix">
                                 <li><i class="icon-user"></i><?php echo e($post -> authorId -> name); ?></li>

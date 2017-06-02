@@ -201,21 +201,21 @@
     <div class="container clear-bottommargin clearfix">
         <div class="row bottommargin">
 
-            @foreach($global_posts as $post)
+            @foreach($g_posts_category_1 as $g_post_category_1)
 
-                <div class="col-md-4 col-sm-12 ">
+                <div class="col-md-3 col-sm-12 ">
                     <div class="ipost clearfix">
                         <div class="entry-image">
-                            <a href="{{ url($post -> slug) }}"> <img src="{{ Voyager::image( $post->image ) }}" alt="{{ $post->title }}" /> </a>
+                            <a href="{{ url($g_post_category_1 -> slug) }}"> <img src="{{ Voyager::image( $g_post_category_1->image ) }}" alt="{{ $g_post_category_1->title }}" /> </a>
                         </div>
                         <div class="entry-title">
-                            <h3><a href="{{ url($post -> slug) }}">{{ $post->title }} </a></h3>
+                            <h3><a href="{{ url($g_post_category_1 -> slug) }}">{{ $g_post_category_1->title }} </a></h3>
                         </div>
                         <ul class="entry-meta clearfix">
-                            <li><i class="icon-calendar3"></i> {{ $post -> created_at->format(' j M y') }}</li>
+                            <li><i class="icon-calendar3"></i> {{ $g_post_category_1 -> created_at->format(' j M y') }}</li>
                         </ul>
                         <div class="entry-content">
-                            {{ $post->excerpt }}
+                            {{ $g_post_category_1->excerpt }}
                         </div>
                     </div>
                 </div>

@@ -40,7 +40,8 @@
 
                             </div>
                             <div class="entry-title">
-{{--                                <a href="{{ route('pages.posts.show-post', $post->slug) }}" class="btn btn-primary"><h2> {{ $post -> title }}</h2></a>--}}
+                                <h2> <a href="{{ url($post -> slug) }}"> {{ $post->title  }} </a></h2>
+                                {{--                                <a href="{{ route('pages.posts.show-post', $post->slug) }}" class="btn btn-primary"><h2> {{ $post -> title }}</h2></a>--}}
                             </div>
                             <ul class="entry-meta clearfix">
                                 <li><i class="icon-user"></i>{{ $post -> authorId -> name }}</li>
