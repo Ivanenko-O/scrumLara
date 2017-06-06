@@ -201,21 +201,21 @@
     <div class="container clear-bottommargin clearfix">
         <div class="row bottommargin">
 
-            <?php $__currentLoopData = $g_posts_category_1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $g_post_category_1): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php $__currentLoopData = $g_posts_cat_1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $g_post_cat_1): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                 <div class="col-md-3 col-sm-12 ">
                     <div class="ipost clearfix">
                         <div class="entry-image">
-                            <a href="<?php echo e(url($g_post_category_1 -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $g_post_category_1->image )); ?>" alt="<?php echo e($g_post_category_1->title); ?>" /> </a>
+                            <a href="<?php echo e(url($g_post_cat_1 -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $g_post_cat_1->image )); ?>" alt="<?php echo e($g_post_cat_1->title); ?>" /> </a>
                         </div>
                         <div class="entry-title">
-                            <h3><a href="<?php echo e(url($g_post_category_1 -> slug)); ?>"><?php echo e($g_post_category_1->title); ?> </a></h3>
+                            <h3><a href="<?php echo e(url($g_post_cat_1 -> slug)); ?>"><?php echo e($g_post_cat_1->title); ?> </a></h3>
                         </div>
                         <ul class="entry-meta clearfix">
-                            <li><i class="icon-calendar3"></i> <?php echo e($g_post_category_1 -> created_at->format(' j M y')); ?></li>
+                            <li><i class="icon-calendar3"></i> <?php echo e($g_post_cat_1 -> created_at->format(' j M y')); ?></li>
                         </ul>
                         <div class="entry-content">
-                            <?php echo e($g_post_category_1->excerpt); ?>
+                            <?php echo e($g_post_cat_1->excerpt); ?>
 
                         </div>
                     </div>
@@ -230,8 +230,41 @@
     </div>
 
 
+        <div class="section dark nobottommargin">
 
-    <?php echo $__env->make("partials.part-articles-main", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <div class="container clearfix">
+                <div class="fancy-title title-border">
+                    <h3>Последнее из Блога</h3>
+                </div>
+
+                <div id="oc-images2" class="owl-carousel image-carousel carousel-widget" data-margin="20" data-pagi="false"
+                     data-rewind="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-md="4"
+                     data-items-lg="4">
+
+                    <?php $__currentLoopData = $g_posts_cat_2; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $g_post_cat_2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="oc-item">
+                            <div class="ipost clearfix">
+                                <div class="entry-image">
+                                    <a href="<?php echo e(url($g_post_cat_2 -> slug)); ?>"> <img src="<?php echo e(Voyager::image($g_post_cat_2->image)); ?>" alt="<?php echo e($g_post_cat_2->title); ?>"></a>
+                                </div>
+                                <div class="entry-title">
+                                    <h4><a href="<?php echo e(url($g_post_cat_2->slug)); ?>"><?php echo e($g_post_cat_2->title); ?></a></h4>
+                                </div>
+                                <ul class="entry-meta clearfix">
+                                    <li><i class="icon-calendar3"><?php echo e($g_post_cat_2->created_at->format('y M j')); ?></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+                <a href="../blog.php"
+                   class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Читать весь Блог</span><i
+                            class="icon-angle-right"></i></a>
+
+            </div>
+
+        </div>
 
 
     

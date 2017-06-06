@@ -201,21 +201,21 @@
     <div class="container clear-bottommargin clearfix">
         <div class="row bottommargin">
 
-            @foreach($g_posts_category_1 as $g_post_category_1)
+            @foreach($g_posts_cat_1 as $g_post_cat_1)
 
                 <div class="col-md-3 col-sm-12 ">
                     <div class="ipost clearfix">
                         <div class="entry-image">
-                            <a href="{{ url($g_post_category_1 -> slug) }}"> <img src="{{ Voyager::image( $g_post_category_1->image ) }}" alt="{{ $g_post_category_1->title }}" /> </a>
+                            <a href="{{ url($g_post_cat_1 -> slug) }}"> <img src="{{ Voyager::image( $g_post_cat_1->image ) }}" alt="{{ $g_post_cat_1->title }}" /> </a>
                         </div>
                         <div class="entry-title">
-                            <h3><a href="{{ url($g_post_category_1 -> slug) }}">{{ $g_post_category_1->title }} </a></h3>
+                            <h3><a href="{{ url($g_post_cat_1 -> slug) }}">{{ $g_post_cat_1->title }} </a></h3>
                         </div>
                         <ul class="entry-meta clearfix">
-                            <li><i class="icon-calendar3"></i> {{ $g_post_category_1 -> created_at->format(' j M y') }}</li>
+                            <li><i class="icon-calendar3"></i> {{ $g_post_cat_1 -> created_at->format(' j M y') }}</li>
                         </ul>
                         <div class="entry-content">
-                            {{ $g_post_category_1->excerpt }}
+                            {{ $g_post_cat_1->excerpt }}
                         </div>
                     </div>
                 </div>
@@ -229,8 +229,41 @@
     </div>
 
 
+        <div class="section dark nobottommargin">
 
-    @include("partials.part-articles-main")
+            <div class="container clearfix">
+                <div class="fancy-title title-border">
+                    <h3>Последнее из Блога</h3>
+                </div>
+
+                <div id="oc-images2" class="owl-carousel image-carousel carousel-widget" data-margin="20" data-pagi="false"
+                     data-rewind="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-md="4"
+                     data-items-lg="4">
+
+                    @foreach($g_posts_cat_2 as $g_post_cat_2)
+                        <div class="oc-item">
+                            <div class="ipost clearfix">
+                                <div class="entry-image">
+                                    <a href="{{ url($g_post_cat_2 -> slug)}}"> <img src="{{ Voyager::image($g_post_cat_2->image) }}" alt="{{ $g_post_cat_2->title }}"></a>
+                                </div>
+                                <div class="entry-title">
+                                    <h4><a href="{{url($g_post_cat_2->slug)}}">{{ $g_post_cat_2->title }}</a></h4>
+                                </div>
+                                <ul class="entry-meta clearfix">
+                                    <li><i class="icon-calendar3">{{ $g_post_cat_2->created_at->format('y M j') }}</i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    @endforeach
+
+                <a href="../blog.php"
+                   class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Читать весь Блог</span><i
+                            class="icon-angle-right"></i></a>
+
+            </div>
+
+        </div>
 
 
     {{-- clients --}}

@@ -34,6 +34,9 @@ class Post extends Model
         return $this->belongsTo(Voyager::modelClass('User'), 'author_id', 'id', 'name');
     }
 
+
+
+
     /**
      * Scope a query to only published scopes.
      *
@@ -41,36 +44,24 @@ class Post extends Model
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
+
+
     public function scopePublished(Builder $query)
     {
         return $query->where('status', '=', static::PUBLISHED);
     }
 
-    /**
-     * Scope a query to only published posts.
-     *
-     * @param string $category
-     *
-     * @return array
-     */
-
-    public function getAllPublished()
+    public function scopeCategories(Builder $query, $category)
     {
-        return Post::where('status', 'PUBLISHED');
-    }
-
-    public function getByCategory($category)
-    {
-//        $this -> category = $category;
-        return $this -> getAllPublished()
-            -> with(['category' => function($query) use ($category) {
+        return $query -> whereHas('category', function($query) use ($category) {
                 $query -> where('id', $category);
-            }]) ;
+            }) ;
     }
 
     public function getLimitedAndSortedBy($limit, $category)
     {
-        return $this -> getByCategory($category)
+        return Post::published()
+            -> categories($category)
             -> orderBy('created_at', 'exerpt') -> take($limit) -> get();
     }
 
@@ -83,7 +74,6 @@ class Post extends Model
     {
         return $this->hasOne(Voyager::modelClass('Category'), 'id', 'category_id', 'name');
     }
-
 
 
 }
