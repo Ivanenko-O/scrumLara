@@ -11,7 +11,6 @@ Route::get('andriipavlenko', 'PagesController@getAndriipavlenko');
 Route::get('aboutus', 'PagesController@getAboutus');
 
 
-
 Route::get('/analysis-and-implementation', function() {
     return view('pages.services.analysis-and-implementation.analysis-and-implementation');
 });
@@ -29,33 +28,14 @@ Route::get('/404', function() {
     return view('pages.404.404');
 });
 
-
-//Route::get('/services/analysis-and-implementation', function() {
-//    return view('pages.services.analysis-and-implementation.analysis-and-implementation');
-//});
-//
-//Route::get('/services/coaching-and-support', function() {
-//    return view('pages.services.coaching-and-support.coaching-and-support');
-//});
-//
-//Route::get('/services/corporate-study', function() {
-//    return view('pages.services.corporate-study.corporate-study');
-//});
-//
-//Route::get('/about/aboutus', function() {
-//    return view('pages.about.aboutus.aboutus');
-//});
-//
-//Route::get('/about/andriipavlenko', function() {
-//    return view('pages.about.andriipavlenko.andriipavlenko');
-//});
-
-//
-//Route::get('/contact', function() {
-//    return view('pages.contact.contact');
-//});
+Route::get('/list-courses', function () {
+    return view('pages.list-courses.list-courses');
+});
 
 
+Route::get('course-scrum', function (){
+    return view('pages.course-scrum.course-scrum');
+})->middleware('auth');
 
 //Route for posts
 try {
@@ -78,6 +58,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+
+

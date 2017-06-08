@@ -24,15 +24,15 @@
 <div id="wrapper" class="clearfix">
 
 
-    <?php echo $__env->make("partials.top-bar", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-    <?php echo $__env->make("partials.header", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make("layouts.top-bar", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make("layouts.header", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
     
     <?php echo $__env->yieldContent('content'); ?>
     
 
 
-    <?php echo $__env->make("partials.footer", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make("layouts.footer", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 </div>
 

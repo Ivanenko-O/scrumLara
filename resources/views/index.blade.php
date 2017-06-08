@@ -24,15 +24,15 @@
 <div id="wrapper" class="clearfix">
 
 
-    @include("partials.top-bar")
-    @include("partials.header")
+    @include("layouts.top-bar")
+    @include("layouts.header")
 
     {{-- dinamic part. define in each folder of page --}}
     @yield('content')
     {{-- end dinamic part --}}
 
 
-    @include ("partials.footer")
+    @include ("layouts.footer")
 
 </div>
 

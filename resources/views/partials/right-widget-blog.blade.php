@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <ul class="entry-meta ">
-                    <li><i class="icon-calendar">{{ $g_post_cat_2->created_at->format('y M j') }}</i></li>
+                    <li><i class="icon-calendar"> {{ $g_post_cat_2->created_at->format('j M y') }}</i></li>
                 </ul>
             </div>
         @endforeach
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <ul class="entry-meta ">
-                    <li><i class="icon-calendar">{{ $g_post_cat_1->created_at->format('y M j') }}</i></li>
+                    <li><i class="icon-calendar"> {{ $g_post_cat_1->created_at->format('j M y') }}</i></li>
                 </ul>
             </div>
         @endforeach
