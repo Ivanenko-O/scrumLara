@@ -67,6 +67,7 @@ class Post extends Model
 
 
 
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

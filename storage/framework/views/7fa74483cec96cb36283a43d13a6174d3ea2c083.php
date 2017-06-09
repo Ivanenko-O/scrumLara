@@ -41,6 +41,23 @@
 
                         </div>
                     </div>
+                    <!-- Post Author Info
+                      ============================================= -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Автор <span> <?php echo e($post -> authorId -> name); ?></span>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="author-image">
+                                <img src="<?php echo e(Voyager::image($post-> authorId -> avatar)); ?>" alt="" class="img-circle">
+                            </div>
+                            <?php echo e($post-> authorId -> auth_descrip); ?>
+
+                        </div>
+                    </div><!-- Post Single - Author End -->
+
+                    <div class="line"></div>
 
                 </div>
 

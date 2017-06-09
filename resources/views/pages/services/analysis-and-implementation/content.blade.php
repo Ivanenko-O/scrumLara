@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="col-md-4 hidden-sm bottommargin center">
-                        <img src="../images/services/the-who-man.png" alt="analysis-and-implementation">
+                        <img src="{{ URL::asset('images/services/the-who-man.png') }}" alt="analysis-and-implementation">
                     </div>
 
                     <div class="col-md-4 col-sm-6 bottommargin">

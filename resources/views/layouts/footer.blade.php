@@ -14,7 +14,7 @@
 
                     <div class="widget clearfix">
 
-                        <img src="images/logo3w.png" alt="" class="footer-logo">
+                        <img src="{{URL::asset('images/logo3w.png')}}" alt="" class="footer-logo">
 
                         <p>Мы верим в то, что <strong>Адаптивность</strong>, <strong>Знания</strong> &amp; <strong>Отличная команда</strong> определяют успех компании.</p>
                             <abbr title="Phone Number"><strong>Тел:</strong></abbr> (380)50-473-71-76<br>

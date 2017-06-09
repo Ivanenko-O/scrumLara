@@ -1,34 +1,32 @@
 
-    <section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
+    <section class=" swiper_wrapper full-screen clearfix">
+        <div class="slider-parallax swiper_wrapper full-screen clearfix">
+            <div class="swiper-container swiper-parent">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide dark" style="background-image: url('../images/about/about-header.jpg');">
+                        <div class="container clearfix vertical-middle">
+                            <div class="slider-caption slider-caption-center topmargin-sm">
+                                <div class="uppercase h1xl t700"><h1>Андрей Павленко</h1></div>
+                                <span class="uppercase" style="letter-spacing:10px; font-size: 18px" data-caption-animate="fadeInUp" data-caption-delay="200">Scrum - тренер</span>
+                                <p class="lead topmargin" data-caption-animate="fadeInUp" data-caption-delay="300">
+                                    Андрей Павленко - Agile-эксперт и практик, Scrum-тренер и бизнес-наставник. Консультант среднего бизнеса и стартапов по использованию адаптивных подходов управления.</p>
+                                <div class="topmargin" data-caption-animate="fadeInUp" data-caption-delay="500">
+                                    <a href="https://www.facebook.com/andrey.pavlenko" class="social-icon inline-block si-small si-rounded si-colored si-facebook" title="Facebook">
+                                        <i class="icon-facebook"></i>
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/andriipavlenko/" class="social-icon inline-block si-small si-rounded si-colored si-linkedin" title="Linkedin">
+                                        <i class="icon-linkedin"></i>
+                                        <i class="icon-linkedin"></i>
+                                    </a>
+                                </div>
 
-        <div class="swiper-container swiper-parent">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('images/about/about-header.jpg');">
-                    <div class="container clearfix">
-                        <div class="slider-caption slider-caption-center dark">
-                            <div class="uppercase h1xl t700"><h1>Андрей Павленко</h1></div>
-                            <span class="uppercase" style="letter-spacing:10px; font-size: 18px" data-caption-animate="fadeInUp" data-caption-delay="200">Scrum - тренер</span>
-                            <p class="lead topmargin" data-caption-animate="fadeInUp" data-caption-delay="300">
-                                Андрей Павленко - Agile-эксперт и практик, Scrum-тренер и бизнес-наставник. Консультант среднего бизнеса и стартапов по использованию адаптивных подходов управления.</p>
-                            <div class="topmargin" data-caption-animate="fadeInUp" data-caption-delay="500">
-                                <a href="https://www.facebook.com/andrey.pavlenko" class="social-icon inline-block si-small si-rounded si-colored si-facebook" title="Facebook">
-                                    <i class="icon-facebook"></i>
-                                    <i class="icon-facebook"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/andriipavlenko/" class="social-icon inline-block si-small si-rounded si-colored si-linkedin" title="Linkedin">
-                                    <i class="icon-linkedin"></i>
-                                    <i class="icon-linkedin"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
-            <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
-            <div id="slide-number"><div id="slide-number-current"></div><span>/</span><div id="slide-number-total"></div></div>
         </div>
-
     </section>
     
 
@@ -85,7 +83,7 @@
 
                     <div class="col_one_third nobottommargin">
                         <div style="height: 13rem;">
-                            <img src="images/about/scrum-alliance.png" style="margin-bottom: 10px;">
+                            <img src="../images/about/scrum-alliance.png" style="margin-bottom: 10px;">
                         </div>
                         <div style="border: 2px solid #fff; border-width:2px 0; margin: 15px 0px">
                             <h3 style="margin: 15px;"><span>SCRUM ALLIANCE</span></h3>
@@ -95,7 +93,7 @@
                     </div>
                     <div class="col_one_third nobottommargin">
                         <div style="height: 13rem;">
-                            <img src="images/about/scrum-org.png" style="margin-bottom: 10px;">
+                            <img src="../images/about/scrum-org.png" style="margin-bottom: 10px;">
                         </div>
                         <div style="border: 2px solid #fff; border-width:2px 0; margin: 15px 0px">
                             <h3 style="margin: 15px;"><span>SCRUM ORG</span></h3>
@@ -105,7 +103,7 @@
                     </div>
                     <div class="col_one_third col_last nobottommargin">  				
                         <div style="height: 13rem;">
-                            <img src="images/about/Management.png" style="margin-bottom: 10px;">
+                            <img src="../images/about/Management.png" style="margin-bottom: 10px;">
                         </div>
                         <div style="border: 2px solid #fff; border-width:2px 0; margin: 15px 0px">
                             <h3 style="margin: 15px;"><span>MANAGEMENT 3.0</span></h3>

@@ -12,9 +12,9 @@
             {{-- Logo --}}
             <div id="logo">
                 <a href="/" class="standard-logo" data-dark-logo="../images/logo3b.png"><img
-                            src="images/logo3b.png" alt="logo"></a>
+                            src="{{ URL::asset('images/logo3b.png') }}" alt="logo"></a>
                 <a href="/" class="retina-logo" data-dark-logo="../images/logo3retina.png"><img
-                            src="images/logo3retina.png" alt="logo-retina"></a>
+                            src="{{ URL::asset('images/logo3retina.png') }}" alt="logo-retina"></a>
             </div>
             {{-- #logo end --}}
 
@@ -52,19 +52,19 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="scrum0">
+                                            <a href="{{ url('scrum0') }}">
                                                 <div><i class="icon-calendar3"></i>"Scrum с нуля" - однодневный тренинг
                                                 </div>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="master-of-scrum">
+                                            <a href="{{url ('master-of-scrum') }}">
                                                 <div><i class="icon-calendar3"></i>"Мастер Scrum" - двухдневный тренинг
                                                 </div>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="coming-soon">
+                                            <a href="{{url ('coming-soon') }}">
                                                 <div><i class="icon-calendar3"></i>"Scrum Advanced" - трехдневный
                                                     практикум
                                                 </div>
@@ -78,14 +78,14 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="management30">
+                                            <a href="{{url ('management30') }}">
                                                 <div><i class="icon-calendar3"></i>"Management 3.0" - 2 дня
                                                     Agile-практик для менеджеров
                                                 </div>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="coming-soon">
+                                            <a href="{{url ('coming-soon') }}">
                                                 <div><i class="icon-calendar3"></i>"Инструменты Scrum Мастера" -
                                                     однодневный тренинг
                                                 </div>
@@ -101,23 +101,23 @@
                             <span>Что мы умеем</span></a>
                         <ul>
                             <li>
-                                <a href="corporate-study">
+                                <a href="{{ url('/services/corporate-study')}}">
                                     <div>Корпоративное обучение</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="analysis-and-implementation">
+                                <a href="{{url ('/services/analysis-and-implementation') }}">
                                     <div>Анализ и внедрение</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="coaching-and-support">
+                                <a href="{{url ('/services/coaching-and-support') }}">
                                     <div>Коучинг и сопровождение</div>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="mega-menu"><a href="blog">
+                    <li class="mega-menu"><a href="{{url ('blog') }}">
                             <div>Блог</div>
                             <span>Наша жизнь</span></a>
                     </li>
@@ -127,15 +127,15 @@
                             <div>О Нас</div>
                             <span>Познакомимся</span></a>
                         <ul>
-                            <li><a href="aboutus">
+                            <li><a href="{{url ('/about/aboutus') }}">
                                     <div>О компании</div>
                                 </a></li>
-                            <li><a href="andriipavlenko">
+                            <li><a href="{{url ('/about/andriipavlenko') }}">
                                     <div>О тренере</div>
                                 </a></li>
                         </ul>
                     </li>
-                    <li class="mega-menu"><a href="contact">
+                    <li class="mega-menu"><a href="{{ url('contact') }}">
                             <div>Контакты</div>
                             <span>Как связаться</span></a>
                     </li>
