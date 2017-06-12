@@ -20,31 +20,28 @@
 
             <div class="container clearfix">
 
-                <!-- Post Content -->
+                {{--  Post Content --}}
                 <div class="postcontent nobottommargin clearfix">
 
                     <div class="single-post nobottommargin">
 
-                        <!-- Single Post -->
+                        {{--  Single Post --}}
                         <div class="entry clearfix">
                             <h2><?php echo $post->title; ?></h2>
 
-                            <!-- Entry Meta -->
+                            {{--  Entry Meta --}}
                             <ul class="entry-meta clearfix">
                                 <li><i class="icon-calendar3"></i><?php echo $post -> created_at ->format(' j M y') ?></li>
                                 <li><a href="andriipavlenko"><i class="icon-user"> <?php echo  $post -> authorId -> name ?></i></a>
                                 <li><a href="andriipavlenko"><i class="icon-folder"> <?php echo  $post -> category -> name ?></i></a>
                                 </li>
                             </ul>
-                            <!-- .entry-meta end -->
+                            {{--  .entry-meta end --}}
 
                             <?php echo $post->body; ?>
-
-
                         </div>
                     </div>
-                    <!-- Post Author Info
-                      ============================================= -->
+                    {{--  Post Author Info --}}
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">Автор <span> {{ $post -> authorId -> name }}</span>
@@ -56,9 +53,24 @@
                             </div>
                             {{ $post-> authorId -> auth_descrip }}
                         </div>
-                    </div><!-- Post Single - Author End -->
+                    </div>
+                    {{--  Post Single - Author End --}}
 
                     <div class="line"></div>
+
+                    {{--  Post Navigation --}}
+                    <div class="post-navigation clearfix">
+                        <div class="col_half nobottommargin">
+                            <a href="{{ URL::to( $prev ) }}"> &lArr; Предыдущая статья</a>
+                        </div>
+
+                        <div class="col_half col_last tright nobottommargin">
+                            <a href="{{ URL::to( $next ) }}">Следующая статья &rArr; </a>
+                        </div>
+                    </div>
+                    {{--  .post-navigation end --}}
+
+
 
                 </div>
 

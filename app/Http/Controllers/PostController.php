@@ -16,22 +16,22 @@ class PostController extends \App\Http\Controllers\Controller
 {
 
     public function show() {
+
         $slug = request()->segment(1);
-        $post = \TCG\Voyager\Models\Post::where('slug', $slug)->first();
+        $post = Post::where('slug', $slug)->first();
+
+        $prev = Post::where('id', '<', $post->id )->max('slug');
+        $next = Post::where('id', '>', $post->id )->min('slug');
 
         return view('pages.posts.show-post', [
             'post' => $post,
-        ]);
+        ])->with('prev', $prev)->with('next', $next);
     }
 
     public function showAll() {
-        $posts = Post::orderBy('created_at', 'exerpt')->limit(10)->get();
+        $posts = Post::orderBy('created_at', 'exerpt')->paginate(7);
 
         return view('pages.blog.blog')->withPosts($posts);
-    }
-
-    public function getCategories() {
-        $categories = \TCG\Voyager\Models\Category::all();
     }
 
 }

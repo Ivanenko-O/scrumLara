@@ -31,48 +31,21 @@
                         <div id="post-list-footer">
 
                             <div class="spost clearfix">
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h4><a href="blog/what-is-management30">Что такое Management30?</a></h4>
+
+                                @foreach($g_posts_cat_2 as $g_post_cat_2)
+                                    <div class="entry-c">
+                                        <div class="entry-title">
+                                            <h4>
+                                                <a href="{{ url($g_post_cat_2 -> slug) }}">{{ $g_post_cat_2 -> title }}</a></h4>
+                                        </div>
+                                        <ul class="entry-meta">
+                                            <li>{{  $g_post_cat_2-> created_at->format('j M Y') }}</li>
+                                        </ul>
                                     </div>
-                                    <ul class="entry-meta">
-                                        <li>27 марта 2017</li>
-                                    </ul>
-                                </div>
+                                @endforeach
+
                             </div>
 
-                            <div class="spost clearfix">
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h4><a href="blog/top-10-fails-of-scrum-teams">ТОП-10 ошибок, которые делают 90% Scrum-команд</a></h4>
-                                    </div>
-                                    <ul class="entry-meta">
-                                        <li>19 марта 2017</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="spost clearfix">
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h4><a href="blog/30-metrics-to-scrum-team-succes">30 метрик успешности для Scrum-команд</a></h4>
-                                    </div>
-                                    <ul class="entry-meta">
-                                        <li>02 март 2017</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="spost clearfix">
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h4><a href="blog/scrum-history">Scrum History, или как все начиналось</a></h4>
-                                    </div>
-                                    <ul class="entry-meta">
-                                        <li>14 ноября 2016</li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
