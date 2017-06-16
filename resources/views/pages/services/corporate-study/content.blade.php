@@ -5,7 +5,7 @@
         <h1>Корпоративные тренинги</h1>
         <span>Наш опыт - для Вашей компании</span>
         <ol class="breadcrumb">
-            <li><a href="../index">Главная</a></li>
+            <li><a href="{{url('')}}">Главная</a></li>
             <li class="active">Корпоративное обучение</li>
         </ol>
     </div>

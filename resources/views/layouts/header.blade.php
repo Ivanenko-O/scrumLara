@@ -35,7 +35,7 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="eventlist">
+                                            <a href="{{ url('eventlist') }}">
                                                 <div><i class="ico n-indent-right"></i>Список всех мероприятий</div>
                                             </a>
                                         </li>

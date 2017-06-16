@@ -1,40 +1,10 @@
 <?php
 
+Route::group(['middleware' => 'web'], function () {
 
 Route::get('blog', 'PostController@showAll');
-Route::get('/', 'PagesController@getHome');
-Route::get('contact', 'PagesController@getContact');
-Route::get('scrum0', 'PagesController@getScrum0');
-Route::get('master-of-scrum', 'PagesController@getMasterScrum');
-Route::get('management30', 'PagesController@getManagement30');
-Route::get('eventlist', 'PagesController@getEventlist');
-Route::get('about/andriipavlenko', 'PagesController@getAndriipavlenko');
-Route::get('about/aboutus', 'PagesController@getAboutus');
 
-
-Route::get('services/analysis-and-implementation', function() {
-    return view('pages.services.analysis-and-implementation.analysis-and-implementation');
-});
-
-Route::get('services/coaching-and-support', function() {
-    return view('pages.services.coaching-and-support.coaching-and-support');
-});
-
-Route::get('services/corporate-study', function() {
-    return view('pages.services.corporate-study.corporate-study');
-});
-
-
-Route::get('/list-courses', function () {
-    return view('pages.list-courses.list-courses');
-});
-
-
-Route::get('course-scrum', function (){
-    return view('pages.course-scrum.course-scrum');
-})->middleware('auth');
-
-//Route for posts
+// Posts Routes
 try {
     $posts = \TCG\Voyager\Models\Post::all();
 
@@ -45,18 +15,56 @@ try {
 
 }
 
-Route::get('/install', function () {
-    Artisan::run('storage:link');
-    return redirect('/?done');
+        Route::get('/', 'PagesController@getHome');
+        Route::get('/home', 'HomeController@index');
+
+        // Contact Routes
+        Route::get('contact', 'PagesController@getContact');
+        Route::post('/contact', 'PagesController@postContact')->name('mail.contact');
+
+
+        // Training Routes
+        Route::get('scrum0', 'PagesController@getScrum0');
+        Route::get('master-of-scrum', 'PagesController@getMasterScrum');
+        Route::get('management30', 'PagesController@getManagement30');
+
+        // Event Routes
+        Route::get('/eventlist', 'PagesController@getEventlist');
+
+        // About Routes
+        Route::get('/about/andriipavlenko', 'PagesController@getAndriipavlenko');
+        Route::get('/about/aboutus', 'PagesController@getAboutus');
+
+        // Service Routes
+        Route::get('services/analysis-and-implementation', 'PagesController@getAnalysis');
+        Route::get('services/coaching-and-support', 'PagesController@getCoaching');
+        Route::get('services/corporate-study', 'PagesController@getCorporateStudy');
+
+
+
+        Route::get('/list-courses', function () {
+            return view('pages.list-courses.list-courses');
+        });
+
+        Route::get('course-scrum', function (){
+            return view('pages.course-scrum.course-scrum');
+        })->middleware('auth');
+
+
+
+        Route::get('/install', function () {
+            Artisan::run('storage:link');
+            return redirect('/?done');
+        });
+
+        // Admin panel Routes
+        Route::group(['prefix' => 'admin'], function () {
+            Voyager::routes();
+        });
+
+        // Authentication Routes
+        Auth::routes();
+
+
+
 });
-
-//Route for admin panel
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
-Auth::routes();
-Route::get('/home', 'HomeController@index');
-
-
-

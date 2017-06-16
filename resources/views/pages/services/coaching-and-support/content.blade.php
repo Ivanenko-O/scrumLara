@@ -6,7 +6,7 @@
         {{-- <span>Что мы проводим для Компаний?</span> --}}
 
         <ol class="breadcrumb">
-            <li><a href="../index">Главная</a></li>
+            <li><a href="{{url('')}}">Главная</a></li>
             <li class="active">Коучинг и сопровождение</li>
         </ol>
     </div>

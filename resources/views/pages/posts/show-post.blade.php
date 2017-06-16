@@ -7,7 +7,7 @@
         <div class="container clearfix">
             <h1> {{ $post-> title }} </h1>
             <ol class="breadcrumb">
-                <li><a href="">Главная</a></li>
+                <li><a href="{{url('')}}">Главная</a></li>
                 <li><a href="blog">Блог</a></li>
                 <li class="active">Статья</li>
             </ol>

@@ -7,15 +7,60 @@
  */
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
+//use App\Http\Requests;
+use Mail;
+use Session;
+
 
 class PagesController extends Controller {
 
-    public function getAbout() {
+     public function getContact() {
+        return view('pages.contact.contact');
+    }
+
+    public function postContact(Request $request) {
+//          $this->validate($request, [
+//             'template-contactform-email' => 'required|email'
+//             ]);
+
+        $name = isset( $_POST['template-contactform-name'] ) ? $_POST['template-contactform-name'] : '';
+        $email = isset( $_POST['template-contactform-email'] ) ? $_POST['template-contactform-email'] : '';
+        $phone = isset( $_POST['template-contactform-phone'] ) ? $_POST['template-contactform-phone'] : '';
+        $subject = 'Регистрация';
+
+        $data = array(
+            'email' => $email,
+            'name' => $name,
+            'subject' => $subject,
+            'phone' => $phone
+        );
+
+          Mail::send('emails.contact', $data, function($message)use ($data){
+
+              $message->from($data['email']);
+              $message->to('lesia@tridentsoftlab.com');
+              $message->subject($data['subject']);
+          });
+
+          Session::flash('success', 'Your email was sent!');
+
+          return redirect('/');
+
 
     }
 
-    public function getContact() {
-        return view('pages.contact.contact');
+    public function getAnalysis() {
+         return view ('pages.services.analysis-and-implementation.analysis-and-implementation');
+    }
+
+    public function getCoaching() {
+        return view('pages.services.coaching-and-support.coaching-and-support');
+    }
+
+    public function getCorporateStudy() {
+        return view('pages.services.corporate-study.corporate-study');
     }
 
     public function getHome() {

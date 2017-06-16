@@ -333,6 +333,7 @@ class ComposerStaticInitcd6283dc796c35920acdc96454738ea7
     );
 
     public static $classMap = array (
+        'AddCashierTableFields' => __DIR__ . '/../..' . '/database/migrations/2017_06_07_105400_add_cashier_table_fields.php',
         'AddControllerToDataTypesTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_06_000000_add_controller_to_data_types_table.php',
         'AddPermissionGroupIdToPermissionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_15_000000_add_permission_group_id_to_permissions_table.php',
         'AddRouteToMenuItemsTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_13_000000_add_route_to_menu_items_table.php',
@@ -344,11 +345,15 @@ class ComposerStaticInitcd6283dc796c35920acdc96454738ea7
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PagesController.php',
+        'App\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\PostScrum' => __DIR__ . '/../..' . '/app/PostScrum.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

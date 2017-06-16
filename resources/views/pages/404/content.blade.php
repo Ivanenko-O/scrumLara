@@ -3,7 +3,7 @@
     <div class="container clearfix">
         <h1>Страница не найдена</h1>
         <ol class="breadcrumb">
-            <li><a href="index">Главная</a></li>
+            <li><a href="{{url('')}}">Главная</a></li>
             <li class="active">404</li>
         </ol>
     </div>

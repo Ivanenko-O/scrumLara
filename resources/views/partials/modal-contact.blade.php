@@ -20,8 +20,10 @@
 
                         <div class="contact-form-result"></div>
 
-                        <form class="nobottommargin" id="template-contactform" name="template-contactform"
-                              action="../include/sendemail-autoresponder.php" method="post">
+                        {{--<form class="nobottommargin" id="template-contactform" name="template-contactform"--}}
+                              {{--action="../include/sendemail-autoresponder.php" method="post">--}}
+                        <form class="nobottommargin" id="template-contactform" name="template-contactform" action="{{ route('mail.contact') }}" method="POST">
+                            {{ csrf_field() }}
                             <script src='https://www.google.com/recaptcha/api.js'></script>
 
                             <div class="form-process"></div>

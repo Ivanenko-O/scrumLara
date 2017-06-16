@@ -1,6 +1,6 @@
 
 <section id="slider" class="slider-parallax"
-         style="background: url('images/about/aboutus-bg.jpg'); background-size: cover;" data-height-lg="670"
+         style="background: url('../images/about/aboutus-bg.jpg'); background-size: cover;" data-height-lg="670"
          data-height-md="500" data-height-sm="400" data-height-xs="250" data-height-xxs="200">
     <div class="slider-parallax-inner">
         <div class="container clearfix">
@@ -62,7 +62,7 @@
         <div class="row clearfix common-height">
 
             <div class="col-md-6 center col-padding"
-                 style="background: url('images/about/aboutus-left.jpg') center center no-repeat; background-size: cover;">
+                 style="background: url('../images/about/aboutus-left.jpg') center center no-repeat; background-size: cover;">
                 <div>&nbsp;</div>
             </div>
 

@@ -4,7 +4,7 @@
             <h1>Контакты</h1>
             <span>Связь с нами</span>
             <ol class="breadcrumb">
-                <li><a href="index">Главная</a></li>
+                <li><a href="{{url('')}}">Главная</a></li>
                 <li class="active">Контакты</li>
             </ol>
         </div>
@@ -76,8 +76,11 @@
 
                     <div class="contact-form-result"></div>
 
-                    <form class="nobottommargin" id="template-contactform" name="template-contactform"
-                          action="include/sendemail-autoresponder.php" method="post">
+                    <form class="nobottommargin" action="{{ route('mail.contact') }}" method="POST">
+
+
+                        {{ csrf_field() }}
+
 
                         <div class="form-process"></div>
 
@@ -140,8 +143,7 @@
                         </div>
 
                         <div class="col_full">
-                            <button class="button button-3d nomargin" type="submit" id="template-contactform-submit"
-                                    name="template-contactform-submit" value="submit">Отправить сообщение
+                            <button class="button button-3d nomargin" type="submit"  value="submit">Отправить сообщение
                             </button>
                         </div>
 

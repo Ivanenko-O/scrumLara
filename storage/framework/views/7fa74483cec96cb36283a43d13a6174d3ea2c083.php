@@ -5,7 +5,7 @@
         <div class="container clearfix">
             <h1> <?php echo e($post-> title); ?> </h1>
             <ol class="breadcrumb">
-                <li><a href="">Главная</a></li>
+                <li><a href="<?php echo e(url('')); ?>">Главная</a></li>
                 <li><a href="blog">Блог</a></li>
                 <li class="active">Статья</li>
             </ol>

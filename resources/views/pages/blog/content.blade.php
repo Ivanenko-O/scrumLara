@@ -5,7 +5,7 @@
         <h1>Блог</h1>
         <span>Наши последние статьи и новости из жизни Scrummasters</span>
         <ol class="breadcrumb">
-            <li><a href="index">Главная</a></li>
+            <li><a href="{{url('')}}">Главная</a></li>
             <li class="active">Блог</li>
         </ol>
     </div>

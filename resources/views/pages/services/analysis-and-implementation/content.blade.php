@@ -5,7 +5,7 @@
         <h1>Консалтинг. Анализ. Внедрение</h1>
         <span>Что мы проводим для Компаний?</span>
         <ol class="breadcrumb">
-            <li><a href="../index">Главная</a></li>
+            <li><a href="{{url('')}}">Главная</a></li>
             <li class="active">Анализ и внедрение</li>
         </ol>
     </div>
