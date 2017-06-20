@@ -2137,10 +2137,10 @@ var SEMICOLON = SEMICOLON || {};
 			SEMICOLON.widget.counter();
 			SEMICOLON.widget.roundedSkill();
 			SEMICOLON.widget.progress();
-			SEMICOLON.widget.twitterFeed();
-			SEMICOLON.widget.flickrFeed();
-			SEMICOLON.widget.instagramPhotos( '36286274.b9e559e.4824cbc1d0c94c23827dc4a2267a9f6b', 'b9e559ec7c284375bf41e9a9fb72ae01' );
-			SEMICOLON.widget.dribbbleShots( '01530280af335d298e756ed8ef786c8c4e92a50b88e53a185531b1a639e768b8' );
+			// SEMICOLON.widget.twitterFeed();
+			// SEMICOLON.widget.flickrFeed();
+			// SEMICOLON.widget.instagramPhotos( '36286274.b9e559e.4824cbc1d0c94c23827dc4a2267a9f6b', 'b9e559ec7c284375bf41e9a9fb72ae01' );
+			// SEMICOLON.widget.dribbbleShots( '01530280af335d298e756ed8ef786c8c4e92a50b88e53a185531b1a639e768b8' );
 			SEMICOLON.widget.navTree();
 			SEMICOLON.widget.textRotater();
 			SEMICOLON.widget.carousel();
@@ -2700,238 +2700,238 @@ var SEMICOLON = SEMICOLON || {};
 			}
 		},
 
-		twitterFeed: function(){
+		// twitterFeed: function(){
+        //
+		// 	if( typeof sm_format_twitter === 'undefined' ) {
+		// 		console.log('twitterFeed: sm_format_twitter() not Defined.');
+		// 		return true;
+		// 	}
+        //
+		// 	if( typeof sm_format_twitter3 === 'undefined' ) {
+		// 		console.log('twitterFeed: sm_format_twitter3() not Defined.');
+		// 		return true;
+		// 	}
+        //
+		// 	var $twitterFeedEl = $('.twitter-feed');
+		// 	if( $twitterFeedEl.length > 0 ){
+		// 		$twitterFeedEl.each(function() {
+		// 			var element = $(this),
+		// 				twitterFeedUser = element.attr('data-username'),
+		// 				twitterFeedCount = element.attr('data-count'),
+		// 				twitterFeedLoader = element.attr('data-loader');
+        //
+		// 			if( !twitterFeedUser ) { twitterFeedUser = 'twitter' }
+		// 			if( !twitterFeedCount ) { twitterFeedCount = 3 }
+		// 			if( !twitterFeedLoader ) { twitterFeedLoader = 'include/twitter/tweets.php'; }
+        //
+		// 			$.getJSON( twitterFeedLoader + '?username='+ twitterFeedUser +'&count='+ twitterFeedCount, function(tweets){
+		// 				if( element.hasClass('fslider') ) {
+		// 					element.find(".slider-wrap").html(sm_format_twitter3(tweets)).promise().done( function(){
+		// 						var timer = setInterval(function(){
+		// 							if( element.find('.slide').length > 1 ) {
+		// 								element.removeClass('customjs');
+		// 								var t = setTimeout( function(){ SEMICOLON.widget.loadFlexSlider(); }, 500);
+		// 								clearInterval(timer);
+		// 							}
+		// 						},500);
+		// 					});
+		// 				} else {
+		// 					element.html(sm_format_twitter(tweets));
+		// 				}
+		// 			});
+		// 		});
+		// 	}
+		// },
 
-			if( typeof sm_format_twitter === 'undefined' ) {
-				console.log('twitterFeed: sm_format_twitter() not Defined.');
-				return true;
-			}
+		// flickrFeed: function(){
+        //
+		// 	if( !$().jflickrfeed ) {
+		// 		console.log('flickrFeed: jflickrfeed not Defined.');
+		// 		return true;
+		// 	}
+        //
+		// 	var $flickrFeedEl = $('.flickr-feed');
+		// 	if( $flickrFeedEl.length > 0 ){
+		// 		$flickrFeedEl.each(function() {
+		// 			var element = $(this),
+		// 				flickrFeedID = element.attr('data-id'),
+		// 				flickrFeedCount = element.attr('data-count'),
+		// 				flickrFeedType = element.attr('data-type'),
+		// 				flickrFeedTypeGet = 'photos_public.gne';
+        //
+		// 			if( flickrFeedType == 'group' ) { flickrFeedTypeGet = 'groups_pool.gne'; }
+		// 			if( !flickrFeedCount ) { flickrFeedCount = 9; }
+        //
+		// 			element.jflickrfeed({
+		// 				feedapi: flickrFeedTypeGet,
+		// 				limit: Number(flickrFeedCount),
+		// 				qstrings: {
+		// 					id: flickrFeedID
+		// 				},
+		// 				itemTemplate: '<a href="{{image_b}}" title="{{title}}" data-lightbox="gallery-item">' +
+		// 									'<img src="{{image_s}}" alt="{{title}}" />' +
+		// 							  '</a>'
+		// 			}, function(data) {
+		// 				SEMICOLON.initialize.lightbox();
+		// 			});
+		// 		});
+		// 	}
+		// },
 
-			if( typeof sm_format_twitter3 === 'undefined' ) {
-				console.log('twitterFeed: sm_format_twitter3() not Defined.');
-				return true;
-			}
-
-			var $twitterFeedEl = $('.twitter-feed');
-			if( $twitterFeedEl.length > 0 ){
-				$twitterFeedEl.each(function() {
-					var element = $(this),
-						twitterFeedUser = element.attr('data-username'),
-						twitterFeedCount = element.attr('data-count'),
-						twitterFeedLoader = element.attr('data-loader');
-
-					if( !twitterFeedUser ) { twitterFeedUser = 'twitter' }
-					if( !twitterFeedCount ) { twitterFeedCount = 3 }
-					if( !twitterFeedLoader ) { twitterFeedLoader = 'include/twitter/tweets.php'; }
-
-					$.getJSON( twitterFeedLoader + '?username='+ twitterFeedUser +'&count='+ twitterFeedCount, function(tweets){
-						if( element.hasClass('fslider') ) {
-							element.find(".slider-wrap").html(sm_format_twitter3(tweets)).promise().done( function(){
-								var timer = setInterval(function(){
-									if( element.find('.slide').length > 1 ) {
-										element.removeClass('customjs');
-										var t = setTimeout( function(){ SEMICOLON.widget.loadFlexSlider(); }, 500);
-										clearInterval(timer);
-									}
-								},500);
-							});
-						} else {
-							element.html(sm_format_twitter(tweets));
-						}
-					});
-				});
-			}
-		},
-
-		flickrFeed: function(){
-
-			if( !$().jflickrfeed ) {
-				console.log('flickrFeed: jflickrfeed not Defined.');
-				return true;
-			}
-
-			var $flickrFeedEl = $('.flickr-feed');
-			if( $flickrFeedEl.length > 0 ){
-				$flickrFeedEl.each(function() {
-					var element = $(this),
-						flickrFeedID = element.attr('data-id'),
-						flickrFeedCount = element.attr('data-count'),
-						flickrFeedType = element.attr('data-type'),
-						flickrFeedTypeGet = 'photos_public.gne';
-
-					if( flickrFeedType == 'group' ) { flickrFeedTypeGet = 'groups_pool.gne'; }
-					if( !flickrFeedCount ) { flickrFeedCount = 9; }
-
-					element.jflickrfeed({
-						feedapi: flickrFeedTypeGet,
-						limit: Number(flickrFeedCount),
-						qstrings: {
-							id: flickrFeedID
-						},
-						itemTemplate: '<a href="{{image_b}}" title="{{title}}" data-lightbox="gallery-item">' +
-											'<img src="{{image_s}}" alt="{{title}}" />' +
-									  '</a>'
-					}, function(data) {
-						SEMICOLON.initialize.lightbox();
-					});
-				});
-			}
-		},
-
-		instagramPhotos: function( c_accessToken, c_clientID ){
-
-			if( typeof Instafeed === 'undefined' ) {
-				console.log('Instafeed not Defined.');
-				return true;
-			}
-
-			var $instagramPhotosEl = $('.instagram-photos');
-			if( $instagramPhotosEl.length > 0 ){
-
-				$instagramPhotosEl.each(function() {
-					var element = $(this),
-						instaGramTarget = element.attr('id'),
-						instaGramUserId = element.attr('data-user'),
-						instaGramTag = element.attr('data-tag'),
-						instaGramLocation = element.attr('data-location'),
-						instaGramCount = element.attr('data-count'),
-						instaGramType = element.attr('data-type'),
-						instaGramSortBy = element.attr('data-sortBy'),
-						instaGramRes = element.attr('data-resolution');
-
-					if( !instaGramCount ) { instaGramCount = 9; }
-					if( !instaGramSortBy ) { instaGramSortBy = 'none'; }
-					if( !instaGramRes ) { instaGramRes = 'thumbnail'; }
-
-					if( instaGramType == 'user' ) {
-
-						var feed = new Instafeed({
-							target: instaGramTarget,
-							get: instaGramType,
-							userId: Number(instaGramUserId),
-							limit: Number(instaGramCount),
-							sortBy: instaGramSortBy,
-							resolution: instaGramRes,
-							accessToken: c_accessToken,
-							clientId: c_clientID
-						});
-
-					} else if( instaGramType == 'tagged' ) {
-
-						var feed = new Instafeed({
-							target: instaGramTarget,
-							get: instaGramType,
-							tagName: instaGramTag,
-							limit: Number(instaGramCount),
-							sortBy: instaGramSortBy,
-							resolution: instaGramRes,
-							clientId: c_clientID
-						});
-
-					} else if( instaGramType == 'location' ) {
-
-						var feed = new Instafeed({
-							target: instaGramTarget,
-							get: instaGramType,
-							locationId: Number(instaGramUserId),
-							limit: Number(instaGramCount),
-							sortBy: instaGramSortBy,
-							resolution: instaGramRes,
-							clientId: c_clientID
-						});
-
-					} else {
-
-						var feed = new Instafeed({
-							target: instaGramTarget,
-							get: 'popular',
-							limit: Number(instaGramCount),
-							sortBy: instaGramSortBy,
-							resolution: instaGramRes,
-							clientId: c_clientID
-						});
-
-					}
-
-					feed.run();
-				});
-			}
-		},
-
-		dribbbleShots: function( c_accessToken ){
-
-			if( !$.jribbble ) {
-				console.log('dribbbleShots: Jribbble not Defined.');
-				return true;
-			}
-
-			if( !$().imagesLoaded ) {
-				console.log('dribbbleShots: imagesLoaded not Defined.');
-				return true;
-			}
-
-			var $dribbbleShotsEl = $('.dribbble-shots');
-			if( $dribbbleShotsEl.length > 0 ){
-
-				$.jribbble.setToken( c_accessToken );
-
-				$dribbbleShotsEl.each(function() {
-					var element = $(this),
-						dribbbleUsername = element.attr('data-user'),
-						dribbbleCount = element.attr('data-count'),
-						dribbbleList = element.attr('data-list'),
-						dribbbleType = element.attr('data-type');
-
-					element.addClass('customjs');
-
-					if( !dribbbleCount ) { dribbbleCount = 9; }
-
-					if( dribbbleType == 'user' ) {
-
-						$.jribbble.users( dribbbleUsername ).shots({
-							'sort': 'recent',
-							'page': 1,
-							'per_page': Number(dribbbleCount)
-						}).then( function(res) {
-							var html = [];
-							res.forEach( function(shot) {
-								html.push('<a href="' + shot.html_url + '" target="_blank">');
-								html.push('<img src="' + shot.images.teaser + '" ');
-								html.push('alt="' + shot.title + '"></a>');
-							});
-							element.html(html.join(''));
-
-							element.imagesLoaded().done( function() {
-								element.removeClass('customjs');
-								SEMICOLON.widget.masonryThumbs();
-							});
-						});
-
-					} else if( dribbbleType == 'list' ) {
-
-						$.jribbble.shots( dribbbleList, {
-							'sort': 'recent',
-							'page': 1,
-							'per_page': Number(dribbbleCount)
-						}).then( function(res) {
-							var html = [];
-							res.forEach( function(shot) {
-								html.push('<a href="' + shot.html_url + '" target="_blank">');
-								html.push('<img src="' + shot.images.teaser + '" ');
-								html.push('alt="' + shot.title + '"></a>');
-							});
-							element.html(html.join(''));
-
-							element.imagesLoaded().done( function() {
-								element.removeClass('customjs');
-								SEMICOLON.widget.masonryThumbs();
-							});
-						});
-					}
-
-				});
-			}
-		},
+		// instagramPhotos: function( c_accessToken, c_clientID ){
+        //
+		// 	if( typeof Instafeed === 'undefined' ) {
+		// 		console.log('Instafeed not Defined.');
+		// 		return true;
+		// 	}
+        //
+		// 	var $instagramPhotosEl = $('.instagram-photos');
+		// 	if( $instagramPhotosEl.length > 0 ){
+        //
+		// 		$instagramPhotosEl.each(function() {
+		// 			var element = $(this),
+		// 				instaGramTarget = element.attr('id'),
+		// 				instaGramUserId = element.attr('data-user'),
+		// 				instaGramTag = element.attr('data-tag'),
+		// 				instaGramLocation = element.attr('data-location'),
+		// 				instaGramCount = element.attr('data-count'),
+		// 				instaGramType = element.attr('data-type'),
+		// 				instaGramSortBy = element.attr('data-sortBy'),
+		// 				instaGramRes = element.attr('data-resolution');
+        //
+		// 			if( !instaGramCount ) { instaGramCount = 9; }
+		// 			if( !instaGramSortBy ) { instaGramSortBy = 'none'; }
+		// 			if( !instaGramRes ) { instaGramRes = 'thumbnail'; }
+        //
+		// 			if( instaGramType == 'user' ) {
+        //
+		// 				var feed = new Instafeed({
+		// 					target: instaGramTarget,
+		// 					get: instaGramType,
+		// 					userId: Number(instaGramUserId),
+		// 					limit: Number(instaGramCount),
+		// 					sortBy: instaGramSortBy,
+		// 					resolution: instaGramRes,
+		// 					accessToken: c_accessToken,
+		// 					clientId: c_clientID
+		// 				});
+        //
+		// 			} else if( instaGramType == 'tagged' ) {
+        //
+		// 				var feed = new Instafeed({
+		// 					target: instaGramTarget,
+		// 					get: instaGramType,
+		// 					tagName: instaGramTag,
+		// 					limit: Number(instaGramCount),
+		// 					sortBy: instaGramSortBy,
+		// 					resolution: instaGramRes,
+		// 					clientId: c_clientID
+		// 				});
+        //
+		// 			} else if( instaGramType == 'location' ) {
+        //
+		// 				var feed = new Instafeed({
+		// 					target: instaGramTarget,
+		// 					get: instaGramType,
+		// 					locationId: Number(instaGramUserId),
+		// 					limit: Number(instaGramCount),
+		// 					sortBy: instaGramSortBy,
+		// 					resolution: instaGramRes,
+		// 					clientId: c_clientID
+		// 				});
+        //
+		// 			} else {
+        //
+		// 				var feed = new Instafeed({
+		// 					target: instaGramTarget,
+		// 					get: 'popular',
+		// 					limit: Number(instaGramCount),
+		// 					sortBy: instaGramSortBy,
+		// 					resolution: instaGramRes,
+		// 					clientId: c_clientID
+		// 				});
+        //
+		// 			}
+        //
+		// 			feed.run();
+		// 		});
+		// 	}
+		// },
+        //
+		// dribbbleShots: function( c_accessToken ){
+        //
+		// 	if( !$.jribbble ) {
+		// 		console.log('dribbbleShots: Jribbble not Defined.');
+		// 		return true;
+		// 	}
+        //
+		// 	if( !$().imagesLoaded ) {
+		// 		console.log('dribbbleShots: imagesLoaded not Defined.');
+		// 		return true;
+		// 	}
+        //
+		// 	var $dribbbleShotsEl = $('.dribbble-shots');
+		// 	if( $dribbbleShotsEl.length > 0 ){
+        //
+		// 		$.jribbble.setToken( c_accessToken );
+        //
+		// 		$dribbbleShotsEl.each(function() {
+		// 			var element = $(this),
+		// 				dribbbleUsername = element.attr('data-user'),
+		// 				dribbbleCount = element.attr('data-count'),
+		// 				dribbbleList = element.attr('data-list'),
+		// 				dribbbleType = element.attr('data-type');
+        //
+		// 			element.addClass('customjs');
+        //
+		// 			if( !dribbbleCount ) { dribbbleCount = 9; }
+        //
+		// 			if( dribbbleType == 'user' ) {
+        //
+		// 				$.jribbble.users( dribbbleUsername ).shots({
+		// 					'sort': 'recent',
+		// 					'page': 1,
+		// 					'per_page': Number(dribbbleCount)
+		// 				}).then( function(res) {
+		// 					var html = [];
+		// 					res.forEach( function(shot) {
+		// 						html.push('<a href="' + shot.html_url + '" target="_blank">');
+		// 						html.push('<img src="' + shot.images.teaser + '" ');
+		// 						html.push('alt="' + shot.title + '"></a>');
+		// 					});
+		// 					element.html(html.join(''));
+        //
+		// 					element.imagesLoaded().done( function() {
+		// 						element.removeClass('customjs');
+		// 						SEMICOLON.widget.masonryThumbs();
+		// 					});
+		// 				});
+        //
+		// 			} else if( dribbbleType == 'list' ) {
+        //
+		// 				$.jribbble.shots( dribbbleList, {
+		// 					'sort': 'recent',
+		// 					'page': 1,
+		// 					'per_page': Number(dribbbleCount)
+		// 				}).then( function(res) {
+		// 					var html = [];
+		// 					res.forEach( function(shot) {
+		// 						html.push('<a href="' + shot.html_url + '" target="_blank">');
+		// 						html.push('<img src="' + shot.images.teaser + '" ');
+		// 						html.push('alt="' + shot.title + '"></a>');
+		// 					});
+		// 					element.html(html.join(''));
+        //
+		// 					element.imagesLoaded().done( function() {
+		// 						element.removeClass('customjs');
+		// 						SEMICOLON.widget.masonryThumbs();
+		// 					});
+		// 				});
+		// 			}
+        //
+		// 		});
+		// 	}
+		// },
 
 		navTree: function(){
 			var $navTreeEl = $('.nav-tree');
@@ -3208,10 +3208,10 @@ var SEMICOLON = SEMICOLON || {};
 				return true;
 			}
 
-			if( !$().ajaxSubmit ) {
-				console.log('contactForm: jQuery Form not Defined.');
-				return true;
-			}
+			// if( !$().ajaxSubmit ) {
+			// 	console.log('contactForm: jQuery Form not Defined.');
+			// 	return true;
+			// }
 
 			var $contactForm = $('.contact-widget:not(.customjs)');
 			if( $contactForm.length < 1 ){ return true; }
@@ -3279,10 +3279,10 @@ var SEMICOLON = SEMICOLON || {};
 				return true;
 			}
 
-			if( !$().ajaxSubmit ) {
-				console.log('subscription: jQuery Form not Defined.');
-				return true;
-			}
+			// if( !$().ajaxSubmit ) {
+			// 	console.log('subscription: jQuery Form not Defined.');
+			// 	return true;
+			// }
 
 			var $subscribeForm = $('.subscribe-widget:not(.customjs)');
 			if( $subscribeForm.length < 1 ){ return true; }
@@ -3349,10 +3349,10 @@ var SEMICOLON = SEMICOLON || {};
 				return true;
 			}
 
-			if( !$().ajaxSubmit ) {
-				console.log('quickContact: jQuery Form not Defined.');
-				return true;
-			}
+			// if( !$().ajaxSubmit ) {
+			// 	console.log('quickContact: jQuery Form not Defined.');
+			// 	return true;
+			// }
 
 			var $quickContact = $('.quick-contact-widget:not(.customjs)');
 			if( $quickContact.length < 1 ){ return true; }
@@ -3704,7 +3704,7 @@ var SEMICOLON = SEMICOLON || {};
 		$onePageMenuEl = $('.one-page-menu'),
 		onePageGlobalOffset = 0,
 		$portfolio = $('.portfolio'),
-		$shop = $('.shop'),
+		// $shop = $('.shop'),
 		$gridContainer = $('.grid-container'),
 		$slider = $('#slider'),
 		$sliderParallaxEl = $('.slider-parallax'),
