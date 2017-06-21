@@ -15,8 +15,11 @@
     <link rel="stylesheet" href="<?php echo e(URL::asset ('css/animate.css')); ?>" type="text/css"/>
     <link rel="stylesheet" href="<?php echo e(URL::asset ('css/magnific-popup.css')); ?>" type="text/css"/>
     <link rel="stylesheet" href="<?php echo e(URL::asset ('css/responsive.css')); ?>" type="text/css"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+
 
 </head>
 
@@ -39,13 +42,18 @@
 <div id="gotoTop" class="icon-angle-up"></div>
 
 
-<script type="text/javascript" src="<?php echo e(URL::asset ('js/jquery.js')); ?>"></script>
-<script type="text/javascript" src="<?php echo e(URL::asset ('js/plugins.js')); ?>"></script>
 
-    <?php echo $__env->yieldContent('custom-scripts'); ?>
+<script src="<?php echo e(URL::asset ('js/jquery.js')); ?>"></script>
+<?php echo $__env->yieldPushContent('custom-scripts'); ?>
+<script src="<?php echo e(URL::asset ('js/plugins.js')); ?>"></script>
+
+
 
 
 <script type="text/javascript" src="<?php echo e(URL::asset ('js/functions.js')); ?>"></script>
+
+
+
 
 </body>
 </html>
