@@ -15,10 +15,10 @@ use Intervention\Image\Image;
 class PostController extends \App\Http\Controllers\Controller
 {
 
-    public function show() {
+    public function show($slug) {
 
-        $slug = request()->segment(1);
         $post = Post::where('slug', $slug)->first();
+
 
         $prev = Post::where('id', '<', $post->id )->max('slug');
         $next = Post::where('id', '>', $post->id )->min('slug');

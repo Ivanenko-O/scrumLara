@@ -5,15 +5,17 @@ Route::group(['middleware' => 'web'], function () {
 Route::get('blog', 'PostController@showAll');
 
 // Posts Routes
-try {
-    $posts = \TCG\Voyager\Models\Post::all();
+//try {
+//    $posts = \TCG\Voyager\Models\Post::all();
+//
+//    foreach ($posts as $post) {
+//        Route::get($post->slug, 'PostController@show');
+//    }
+//} catch (\Exception $exception) {
+//
+//}
 
-    foreach ($posts as $post) {
-        Route::get($post->slug, 'PostController@show');
-    }
-} catch (\Exception $exception) {
-
-}
+Route::get('/blog/{slug}', 'PostController@show');
 
         Route::get('/', 'PagesController@getHome');
         Route::get('/home', 'HomeController@index');
