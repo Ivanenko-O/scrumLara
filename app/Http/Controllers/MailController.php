@@ -10,13 +10,14 @@ use Session;
 class mailController extends Controller
 {
     public function postContact(Request $request) {
-//          $this->validate($request, [
-//             'template-contactform-email' => 'required|email'
-//             ]);
+          $this->validate($request, [
+             'template-contactform-email' => 'required|email',
+              'message' => 'min:10']);
 
         $name = isset( $_POST['template-contactform-name'] ) ? $_POST['template-contactform-name'] : '';
         $email = isset( $_POST['template-contactform-email'] ) ? $_POST['template-contactform-email'] : '';
         $phone = isset( $_POST['template-contactform-phone'] ) ? $_POST['template-contactform-phone'] : '';
+
         $subject = 'Регистрация';
 
         $data = array(

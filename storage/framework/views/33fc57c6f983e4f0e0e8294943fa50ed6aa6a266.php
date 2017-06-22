@@ -35,7 +35,7 @@
                             <div class="entry-image">
 
                                 <?php if(!empty($post->image)): ?>
-                                    <a href="<?php echo e(url($post -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $post->image )); ?>" alt="<?php echo e($post->title); ?>" width="800" height="600" /> </a>
+                                    <a href="<?php echo e(url( $post -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $post->image )); ?>" alt="<?php echo e($post->title); ?>" width="800" height="600" /> </a>
 
                                 <?php endif; ?>
 

@@ -43,7 +43,7 @@
 <?php echo $__env->yieldPushContent('custom-scripts'); ?>
 
 
-<script src="<?php echo e(URL::asset ('js/jquery.js')); ?>"></script>
+<script src="<?php echo e(URL::asset ('js/jquery.min.js')); ?>"></script>
 
 <script src="<?php echo e(URL::asset ('js/plugins.js')); ?>"></script>
 

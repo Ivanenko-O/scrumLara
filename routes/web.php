@@ -2,27 +2,21 @@
 
 Route::group(['middleware' => 'web'], function () {
 
-Route::get('blog', 'PostController@showAll');
+        Route::get('blog', 'PostController@showAll');
 
-// Posts Routes
-//try {
-//    $posts = \TCG\Voyager\Models\Post::all();
-//
-//    foreach ($posts as $post) {
-//        Route::get($post->slug, 'PostController@show');
-//    }
-//} catch (\Exception $exception) {
-//
-//}
+        // Posts Routes
+        Route::prefix('blog')->group(function(){
+            Route::get('/{slug}', 'PostController@show');
+        });
 
-Route::get('/blog/{slug}', 'PostController@show');
+//        Route::get('/blog/{slug}', 'PostController@show');
 
         Route::get('/', 'PagesController@getHome');
         Route::get('/home', 'HomeController@index');
 
         // Contact Routes
         Route::get('contact', 'PagesController@getContact');
-        Route::post('/contact', 'PagesController@postContact')->name('mail.contact');
+        Route::post('/contact', 'MailController@postContact')->name('mail.contact');
 
 
         // Training Routes
@@ -34,14 +28,17 @@ Route::get('/blog/{slug}', 'PostController@show');
         Route::get('/eventlist', 'PagesController@getEventlist');
 
         // About Routes
-        Route::get('/about/andriipavlenko', 'PagesController@getAndriipavlenko');
-        Route::get('/about/aboutus', 'PagesController@getAboutus');
+        Route::prefix('about')->group(function(){
+            Route::get('andriipavlenko', 'PagesController@getAndriipavlenko');
+            Route::get('aboutus', 'PagesController@getAboutus');
+        });
 
         // Service Routes
-        Route::get('services/analysis-and-implementation', 'PagesController@getAnalysis');
-        Route::get('services/coaching-and-support', 'PagesController@getCoaching');
-        Route::get('services/corporate-study', 'PagesController@getCorporateStudy');
-
+        Route::prefix('services')->group(function(){
+            Route::get('analysis-and-implementation', 'PagesController@getAnalysis');
+            Route::get('coaching-and-support', 'PagesController@getCoaching');
+            Route::get('corporate-study', 'PagesController@getCorporateStudy');
+        });
 
 
         Route::get('/list-courses', function () {
