@@ -442,7 +442,7 @@
     </div>
 
     <div class="promo parallax promo-dark promo-flat promo-full notopmargin"
-         style="background-image: url('../laravel/public/images/buy-bg.png'); background-position: 50% 137.75px;"
+         style="background-image: url(../images/buy-bg.png); background-position: 50% 137.75px;"
          data-stellar-background-ratio="0.5">
         <div class="container clearfix">
             <h3>Позвоните нам <a href="tel:+380504737176" class="si-call">(050) 473 71 76</a> или оставьте свою заявку

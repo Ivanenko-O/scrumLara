@@ -19,7 +19,6 @@ class PostController extends \App\Http\Controllers\Controller
 
         $post = Post::where('slug', $slug)->first();
 
-
         $prev = Post::where('id', '<', $post->id )->max('slug');
         $next = Post::where('id', '>', $post->id )->min('slug');
 

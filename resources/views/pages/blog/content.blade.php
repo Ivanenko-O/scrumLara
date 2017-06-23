@@ -34,13 +34,13 @@
                             <div class="entry-image">
 
                                 @if(!empty($post->image))
-                                    <a href="{{ url( $post -> slug) }}"> <img src="{{ Voyager::image( $post->image ) }}" alt="{{ $post->title }}" width="800" height="600" /> </a>
+                                    <a href="{{ url('/blog/'. $post -> slug) }}"> <img src="{{ Voyager::image( $post->image ) }}" alt="{{ $post->title }}" width="800" height="600" /> </a>
 
                                 @endif
 
                             </div>
                             <div class="entry-title">
-                                <h2> <a href="{{ url($post -> slug) }}"> {{ $post->title  }} </a></h2>
+                                <h2> <a href="{{ url('/blog/'.$post -> slug) }}"> {{ $post->title  }} </a></h2>
                                 {{--                                <a href="{{ route('pages.posts.show-post', $post->slug) }}" class="btn btn-primary"><h2> {{ $post -> title }}</h2></a>--}}
                             </div>
                             <ul class="entry-meta clearfix">
