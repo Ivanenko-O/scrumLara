@@ -22,7 +22,7 @@ Route::get('/blog/{slug}', 'PostController@show');
 
         // Contact Routes
         Route::get('contact', 'PagesController@getContact');
-        Route::post('/contact', 'PagesController@postContact')->name('mail.contact');
+        Route::post('/contact', 'MailController@postContact')->name('mail.contact');
 
 
         // Training Routes
