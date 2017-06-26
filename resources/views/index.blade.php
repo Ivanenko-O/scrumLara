@@ -43,7 +43,7 @@
 @stack('custom-scripts')
 
 {{--External JavaScripts --}}
-<script src="{{ URL::asset ('js/jquery.js') }}"></script>
+<script src="{{ URL::asset ('js/jquery.min.js') }}"></script>
 
 <script src="{{ URL::asset ('js/plugins.js') }}"></script>
 
