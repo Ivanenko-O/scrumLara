@@ -180,7 +180,7 @@
         {{-- Carousels --}}
         <div class="container clearfix">
              @include('partials.thumbs_event')
-             @include('partials.thumbs_posts')
+             @include('../partials.thumbs_posts')
         </div>
         {{-- END Carousels --}}
     </div>

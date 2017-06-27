@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 //use App\Http\Requests;
 use Mail;
 use Session;
-require ('date_of_training');
+require ('date_of_training/date_of_training');
+
 class mailController extends Controller
 {
     public function postContact(Request $request) {

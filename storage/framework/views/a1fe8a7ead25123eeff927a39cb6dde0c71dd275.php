@@ -176,7 +176,7 @@
         
         <div class="container clearfix">
              <?php echo $__env->make('partials.thumbs_event', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-             <?php echo $__env->make('partials.thumbs_posts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+             <?php echo $__env->make('../partials.thumbs_posts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
         
     </div>
