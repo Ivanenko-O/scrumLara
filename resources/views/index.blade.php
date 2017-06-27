@@ -29,6 +29,15 @@
     @include("layouts.top-bar")
     @include("layouts.header")
 
+
+        {{--@if (session('success'))--}}
+            {{--<div class="flash-message">--}}
+                {{--<div class="alert alert-success">--}}
+                    {{--Cообщение доставлено успешно--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--@endif--}}
+
     {{-- dinamic part. define in each folder of page --}}
     @yield('content')
     {{-- end dinamic part --}}
@@ -40,7 +49,7 @@
 
 {{-- Go To Top --}}
 <div id="gotoTop" class="icon-angle-up"></div>
-@stack('custom-scripts')
+{{--@stack('custom-scripts')--}}
 
 {{--External JavaScripts --}}
 <script src="{{ URL::asset ('js/jquery.min.js') }}"></script>

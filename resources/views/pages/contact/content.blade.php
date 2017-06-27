@@ -148,10 +148,13 @@
                         </div>
 
                     </form>
+
+
+
                 </div>
 
             </div>
-                {{-- .postcontent end --}}
+            {{-- .postcontent end --}}
 
                 {{-- Sidebar --}}
                 <div class="sidebar nobottommargin col_last clearfix">

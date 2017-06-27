@@ -77,11 +77,6 @@
 
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Q7_dC7zHiGU?ecver=1"
                                 frameborder="0" allowfullscreen></iframe>
-                        {{-- old video
-                        <a href="http://vimeo.com/101373765" data-lightbox="iframe" style="position: relative;">
-                            <img src="../images/about/video.jpg" alt="Video">
-                            <span class="i-overlay nobg"><img src="../images/about/video-play.png" alt="Play"></span>
-                        </a> --}}
 
                     </div>
                     <p class="lead nobottommargin"></p>
@@ -179,7 +174,7 @@
         {{-- End History --}}
         {{-- Carousels --}}
         <div class="container clearfix">
-             @include('partials.thumbs_event')
+             @include('../partials.thumbs_event')
              @include('../partials.thumbs_posts')
         </div>
         {{-- END Carousels --}}

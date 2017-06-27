@@ -35,13 +35,13 @@
                             <div class="entry-image">
 
                                 <?php if(!empty($post->image)): ?>
-                                    <a href="<?php echo e(url( $post -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $post->image )); ?>" alt="<?php echo e($post->title); ?>" width="800" height="600" /> </a>
+                                    <a href="<?php echo e(url('/blog/'. $post -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $post->image )); ?>" alt="<?php echo e($post->title); ?>" width="800" height="600" /> </a>
 
                                 <?php endif; ?>
 
                             </div>
                             <div class="entry-title">
-                                <h2> <a href="<?php echo e(url($post -> slug)); ?>"> <?php echo e($post->title); ?> </a></h2>
+                                <h2> <a href="<?php echo e(url('/blog/'.$post -> slug)); ?>"> <?php echo e($post->title); ?> </a></h2>
                                 
                             </div>
                             <ul class="entry-meta clearfix">
@@ -60,6 +60,28 @@
 
                 </div>
             </div>
+
+            
+            <div class="sidebar nobottommargin col_last clearfix">
+                <div class="sidebar-widgets-wrap">
+
+                    <div class="widget clearfix">
+
+                        <div class="tabs nobottommargin clearfix" id="sidebar-tabs">
+                            <ul class="tab-nav clearfix">
+                                <li><a href="#tabs-1">Статьи</a></li>
+                                <li><a href="#tabs-2">Наша жизнь</a></li>
+                            </ul>
+
+                            <div class="tab-container">
+                                <?php echo $__env->make("partials.right-widget-blog", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
         </div>
     </div>
 </section>

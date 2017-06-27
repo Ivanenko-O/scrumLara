@@ -1,3 +1,4 @@
+@include ("partials.modal-contact")
 {{-- Page Title --}}
 <section id="page-title">
 

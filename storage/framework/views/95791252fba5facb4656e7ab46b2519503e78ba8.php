@@ -29,6 +29,15 @@
     <?php echo $__env->make("layouts.top-bar", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <?php echo $__env->make("layouts.header", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
+
+        
+            
+                
+                    
+                
+            
+        
+
     
     <?php echo $__env->yieldContent('content'); ?>
     
@@ -40,7 +49,7 @@
 
 
 <div id="gotoTop" class="icon-angle-up"></div>
-<?php echo $__env->yieldPushContent('custom-scripts'); ?>
+
 
 
 <script src="<?php echo e(URL::asset ('js/jquery.min.js')); ?>"></script>

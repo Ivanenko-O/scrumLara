@@ -56,9 +56,9 @@
                                 <input type="text" id="template-contactform-botcheck"
                                        name="template-contactform-botcheck" value=""  class="sm-form-control"/>
                             </div>
-                            <div class="col-md-12 ">
-                            <div class="g-recaptcha" data-sitekey="6LctrhgUAAAAAD746KoyXgnRYGRUkBSTKDTz8Uu0"></div>
-                            </div>
+                            
+                            
+                            
 
                             <div class="col-md-12 topmargin-sm">
                                 <button name="submit" type="submit" id="submit" tabindex="5" value="Submit"

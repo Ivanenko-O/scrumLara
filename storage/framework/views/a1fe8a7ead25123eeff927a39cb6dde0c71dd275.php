@@ -77,7 +77,6 @@
 
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Q7_dC7zHiGU?ecver=1"
                                 frameborder="0" allowfullscreen></iframe>
-                        
 
                     </div>
                     <p class="lead nobottommargin"></p>
@@ -175,7 +174,7 @@
         
         
         <div class="container clearfix">
-             <?php echo $__env->make('partials.thumbs_event', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+             <?php echo $__env->make('../partials.thumbs_event', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
              <?php echo $__env->make('../partials.thumbs_posts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
         

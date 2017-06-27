@@ -1,4 +1,6 @@
-    <section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix dark">
+<?php  include(app_path().'/date_of_traning/date_of_traning.php');?>
+@include ("partials.modal-contact")
+<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix dark">
 
         <div class="swiper-container swiper-parent">
             <div class="swiper-wrapper">
@@ -546,8 +548,6 @@
             </div>
 
             <section class="page-section topmargin-lg" id="date">
-                <?php define('_root', $_SERVER['DOCUMENT_ROOT']);
-                include(_root . '/date_of_traning/date_of_scrum-masters.php'); ?>
 
                 <div class="heading-block center">
                     <h2>Даты</h2>
@@ -566,11 +566,11 @@
                                 </div>
                                 <div class="pricing-price">
                                 <span class="price-unit"><?php echo $date1_master; ?><span
-                                            class="price-tenure"><?php echo $month1_master; ?><span></span>
+                                            class="price-tenure"><?php echo $month1_master; ?></span></span>
                                 </div>
                                 <div class="pricing-action">
                                     <a href="#" class="btn btn-green btn-block btn-lg" data-toggle="modal"
-                                       data-target="#myModal1">Регистрация</a>
+                                       data-target="#myModal">Регистрация</a>
                                 </div>
                             </div>
 
@@ -583,12 +583,13 @@
                                     <h3><?php echo $city2_master ?></h3>
                                 </div>
                                 <div class="pricing-price">
-                               <span class="price-unit"><?php echo $date2_master; ?><span
-                                           class="price-tenure"><?php echo $month2_master; ?><span></span>
+                               <span class="price-unit"><?php echo $date2_master; ?>
+                                   <span class="price-tenure"><?php echo $month2_master; ?></span>
+                               </span>
                                 </div>
                                 <div class="pricing-action">
                                     <a href="#" class="btn btn-dark btn-block btn-lg" data-toggle="modal"
-                                       data-target="#myModal2">Регистрация</a>
+                                       data-target="#myModal">Регистрация</a>
                                 </div>
                             </div>
 
@@ -602,11 +603,11 @@
                                 </div>
                                 <div class="pricing-price">
                                 <span class="price-unit"><?php echo $date3_master; ?><span
-                                            class="price-tenure"><?php echo $month3_master; ?><span></span>
+                                            class="price-tenure"><?php echo $month3_master; ?></span></span>
                                 </div>
                                 <div class="pricing-action">
                                     <a href="#" class="btn btn-green btn-block btn-lg" data-toggle="modal"
-                                       data-target="#myModal3">Регистрация</a>
+                                       data-target="#myModal">Регистрация</a>
                                 </div>
                             </div>
 
@@ -629,7 +630,7 @@
                 <div class="oc-item">
                     <div class="testimonial">
                         <div class="testi-image">
-                            <a href="https://www.hubber.pro/  target="_blank"><img src="images/testimonials/hubber.png" alt="hubber"></a>
+                            <a href="https://www.hubber.pro/"  target="_blank"><img src="images/testimonials/hubber.png" alt="hubber"></a>
                         </div>
                         <div class="testi-content">
                             <p>Мені вдалося ще глибше зрозуміти процеси каркасу і побачити проблеми, які присутні в
@@ -659,7 +660,7 @@
                 <div class="oc-item">
                     <div class="testimonial">
                         <div class="testi-image">
-                            <a href="https://www.hubber.pro/  target="_blank"><img src="images/testimonials/hubber.png" alt="hubber"></a>
+                            <a href="https://www.hubber.pro/"  target="_blank"><img src="images/testimonials/hubber.png" alt="hubber"></a>
                         </div>
                         <div class="testi-content">
                             <p>Ценность информации, высокое качество донесения информации, качественные инструменты,
@@ -712,7 +713,7 @@
                 <div class="oc-item">
                     <div class="testimonial">
                         <div class="testi-image">
-                            <a href="https://www.hubber.pro/  target="_blank"><img src="images/testimonials/hubber.png"
+                            <a href="https://www.hubber.pro/"  target="_blank"><img src="images/testimonials/hubber.png"
                                                                                    alt="hubber"></a>
                         </div>
                         <div class="testi-content">
@@ -750,7 +751,7 @@
                 <div class="oc-item">
                     <div class="testimonial">
                         <div class="testi-image">
-                            <a href="https://blago.ua  target="_blank"><img src="images/testimonials/blago.png" alt="blago"></a>
+                            <a href="https://blago.ua"  target="_blank"><img src="images/testimonials/blago.png" alt="blago"></a>
                         </div>
                         <div class="testi-content">
 
@@ -771,7 +772,7 @@
                     <div class="testimonial">
                         <div class="testi-image">
                             <a href="https://www.facebook.com/t.novytska?fref=ufi&rc=p
-                               target="_blank"><img
+                               " target="_blank"><img
                                     src="images/testimonials/tat1.jpg"
                                     alt="basis"></a>
                         </div>
@@ -785,7 +786,7 @@
                 <div class="oc-item">
                     <div class="testimonial">
                         <div class="testi-image">
-                            <a href="https://www.infopulse.com/  target="_blank"><img src="images/testimonials/infopulse.png"
+                            <a href="https://www.infopulse.com/  " target="_blank"><img src="images/testimonials/infopulse.png"
                                                                                       alt="infopulse"></a>
                         </div>
                         <div class="testi-content">
@@ -808,7 +809,7 @@
                         <div class="testi-content">
                             <p>Пару слов о тренере. Андрей Павленко прекрасно владеет предметом и доступно объясняет, можно сказать: "Не щадя живота своего" ). Всем рекомендую его тренинги.</p>
                             <div class="testi-meta"><a href="https://www.facebook.com/julius.labintsev
-                               target="_blank">Юлий Лабинцев</a>
+                               " target="_blank">Юлий Лабинцев</a>
                             </div>
                         </div>
                     </div>
@@ -830,7 +831,7 @@
                     <div class="testimonial">
                         <div class="testi-image">
                             <a href="https://www.facebook.com/irina.tomilina.31
-                               target="_blank">
+                               " target="_blank">
                             <img src="images/testimonials/irin1.jpg"
                                  alt="testimonial">
                             </a>
@@ -843,314 +844,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <!-- contact form -->
-            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-body">
-                        <div class="modal-content" style="padding-bottom: 20px">
-
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">&times;</button>
-                                <h3 class="topmargin-sm"> Регистрация на тренинг Scrum с нуля
-                                    на:<br><?php echo $date1_master . " " . $month1_master ?>
-                                </h3>
-
-                                <div class="fancy-title title-dotted-border">
-                                        <span>
-                                          <a href="tel:+380504737176" class="si-call button button-3d button-mini">Позвонить: +380-50-4737176 / +380-99-4102287 </a></h3>
-                                        </span>
-                                </div>
-                            </div>
-
-
-                            <div>
-                                <div class="contact-widget bottommargin-sm">
-
-                                    <div class="contact-form-result"></div>
-
-                                    <form class="nobottommargin" id="template-contactform"
-                                          name="template-contactform"
-                                          action="include/sendemail-autoresponder.php" method="post">
-
-                                        <input type="text" class="hidden" readonly
-                                               value="<?php echo $date1_master . $month1_master ?>"
-                                               name="contact-date" id="contact-date"/>
-
-                                        <div class="form-process"></div>
-
-                                        <div class="col-md-6">
-                                            <label for="template-contactform-email">Email
-                                                <small>*</small>
-                                            </label>
-                                            <input type="email" id="template-contactform-email"
-                                                   name="template-contactform-email"
-                                                   value="" class="required email sm-form-control"/>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="template-contactform-phone">Телефон</label>
-                                            <input type="text" id="template-contactform-phone"
-                                                   name="template-contactform-phone"
-                                                   value="" class="sm-form-control"/>
-                                        </div>
-
-
-                                        <div class="col-md-12 bottommargin-sm topmargin">
-                                            <label for="template-contactform-message">Текст сообщения
-                                                <small>*</small>
-                                            </label>
-                                            <textarea class="required sm-form-control"
-                                                      id="template-contactform-message"
-                                                      name="template-contactform-message"
-                                                      placeholder="Название тренинга или услуги" rows="6"
-                                                      cols="30"></textarea>
-                                        </div>
-
-                                        <div class="col_full hidden">
-                                            <input type="text" id="template-contactform-botcheck"
-                                                   name="template-contactform-botcheck" value=""
-                                                   class="sm-form-control"/>
-                                        </div>
-
-                                        <div class="col-md-12 topmargin-sm">
-                                            <button name="submit" type="submit" id="submit" tabindex="5"
-                                                    value="Submit"
-                                                    class="button button-3d nomargin">Отправить
-                                            </button>
-                                            <button type="button" class="button button-3d" data-dismiss="modal">
-                                                Закрыть
-                                            </button>
-                                        </div>
-                                        <div class="col-md-12 ">
-
-                                            <!--                           <a href="tel:+380504737176" class="si-call button button-3d button-small"> Позвонить 050 473 71 76</a> -->
-                                        </div>
-
-                                    </form>
-
-
-                                </div>
-
-                            </div><!-- Contact Form End -->
-
-
-                            <div class="clear">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- contact form end -->
-
-            <!-- contact2 form -->
-            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-body">
-                        <div class="modal-content" style="padding-bottom: 20px">
-
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">&times;</button>
-                                <h3 class="topmargin-sm"> Регистрация на тренинг Scrum с нуля на:
-                                    <br><?php echo $date2_master . " " . $month2_master ?>
-                                </h3>
-
-                                <div class="fancy-title title-dotted-border">
-                                        <span>
-                                          <a href="tel:+380504737176" class="si-call button button-3d button-mini"> Позвонить: +380-50-4737176 / +380-99-4102287 </a></h3>
-                                        </span>
-                                </div>
-                            </div>
-
-
-                            <div>
-                                <div class="contact-widget bottommargin-sm">
-
-                                    <div class="contact-form-result"></div>
-
-                                    <form class="nobottommargin" id="template-contactform"
-                                          name="template-contactform"
-                                          action="include/sendemail-autoresponder.php" method="post">
-
-                                        <input type="text" class="hidden" readonly
-                                               value="<?php echo $date2_master . $month2_master ?>"
-                                               name="contact-date" id="contact-date"/>
-
-                                        <div class="form-process"></div>
-
-                                        <div class="col-md-6">
-                                            <label for="template-contactform-email">Email
-                                                <small>*</small>
-                                            </label>
-                                            <input type="email" id="template-contactform-email"
-                                                   name="template-contactform-email"
-                                                   value="" class="required email sm-form-control"/>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="template-contactform-phone">Телефон</label>
-                                            <input type="text" id="template-contactform-phone"
-                                                   name="template-contactform-phone"
-                                                   value="" class="sm-form-control"/>
-                                        </div>
-
-
-                                        <div class="col-md-12 bottommargin-sm topmargin">
-                                            <label for="template-contactform-message">Текст сообщения
-                                                <small>*</small>
-                                            </label>
-                                            <textarea class="required sm-form-control"
-                                                      id="template-contactform-message"
-                                                      name="template-contactform-message"
-                                                      placeholder="Название тренинга или услуги" rows="6"
-                                                      cols="30"></textarea>
-                                        </div>
-
-                                        <div class="col_full hidden">
-                                            <input type="text" id="template-contactform-botcheck"
-                                                   name="template-contactform-botcheck" value=""
-                                                   class="sm-form-control"/>
-                                        </div>
-
-                                        <div class="col-md-12 topmargin-sm">
-                                            <button name="submit" type="submit" id="submit" tabindex="5"
-                                                    value="Submit"
-                                                    class="button button-3d nomargin">Отправить
-                                            </button>
-                                            <button type="button" class="button button-3d" data-dismiss="modal">
-                                                Закрыть
-                                            </button>
-                                        </div>
-                                        <div class="col-md-12 ">
-
-                                            <!--                           <a href="tel:+380504737176" class="si-call button button-3d button-small"> Позвонить 050 473 71 76</a> -->
-                                        </div>
-
-                                    </form>
-
-
-                                </div>
-
-                            </div><!-- Contact Form End -->
-
-
-                            <div class="clear">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- contact form end -->
-
-            <!-- contact3 form -->
-            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-body">
-                        <div class="modal-content" style="padding-bottom: 20px">
-
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">&times;</button>
-                                <h3 class="topmargin-sm"> Регистрация на тренинг Scrum с нуля на:
-                                    <br><?php echo $date3_master . " " . $month3_master ?>
-                                </h3>
-
-                                <div class="fancy-title title-dotted-border">
-                                        <span>
-                                          <a href="tel:+380504737176" class="si-call button button-3d button-mini"> Позвонить: +380-50-4737176 / +380-99-4102287 </a></h3>
-                                        </span>
-                                </div>
-                            </div>
-
-
-                            <div>
-                                <div class="contact-widget bottommargin-sm">
-
-                                    <div class="contact-form-result"></div>
-
-                                    <form class="nobottommargin" id="template-contactform"
-                                          name="template-contactform"
-                                          action="include/sendemail-autoresponder.php" method="post">
-
-                                        <input type="text" class="hidden" readonly
-                                               value="<?php echo $date3_master . $month3_master ?>"
-                                               name="contact-date" id="contact-date"/>
-
-                                        <div class="form-process"></div>
-
-                                        <div class="col-md-6">
-                                            <label for="template-contactform-email">Email
-                                                <small>*</small>
-                                            </label>
-                                            <input type="email" id="template-contactform-email"
-                                                   name="template-contactform-email"
-                                                   value="" class="required email sm-form-control"/>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="template-contactform-phone">Телефон</label>
-                                            <input type="text" id="template-contactform-phone"
-                                                   name="template-contactform-phone"
-                                                   value="" class="sm-form-control"/>
-                                        </div>
-
-
-                                        <div class="col-md-12 bottommargin-sm topmargin">
-                                            <label for="template-contactform-message">Текст сообщения
-                                                <small>*</small>
-                                            </label>
-                                            <textarea class="required sm-form-control"
-                                                      id="template-contactform-message"
-                                                      name="template-contactform-message"
-                                                      placeholder="Название тренинга или услуги" rows="6"
-                                                      cols="30"></textarea>
-                                        </div>
-
-                                        <div class="col_full hidden">
-                                            <input type="text" id="template-contactform-botcheck"
-                                                   name="template-contactform-botcheck" value=""
-                                                   class="sm-form-control"/>
-                                        </div>
-
-                                        <div class="col-md-12 topmargin-sm">
-                                            <button name="submit" type="submit" id="submit" tabindex="5"
-                                                    value="Submit"
-                                                    class="button button-3d nomargin">Отправить
-                                            </button>
-                                            <button type="button" class="button button-3d" data-dismiss="modal">
-                                                Закрыть
-                                            </button>
-                                        </div>
-                                        <div class="col-md-12 ">
-
-                                            <!--                           <a href="tel:+380504737176" class="si-call button button-3d button-small"> Позвонить 050 473 71 76</a> -->
-                                        </div>
-
-                                    </form>
-
-
-                                </div>
-
-                            </div><!-- Contact Form End -->
-
-
-                            <div class="clear">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- contact form end -->
 
 
             <!-- GALLERY -->

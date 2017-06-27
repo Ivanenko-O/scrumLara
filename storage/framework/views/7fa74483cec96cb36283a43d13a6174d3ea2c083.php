@@ -30,8 +30,8 @@
                             
                             <ul class="entry-meta clearfix">
                                 <li><i class="icon-calendar3"></i><?php echo $post -> created_at ->format(' j M y') ?></li>
-                                <li><a href="andriipavlenko"><i class="icon-user"> <?php echo  $post -> authorId -> name ?></i></a>
-                                <li><a href="andriipavlenko"><i class="icon-folder"> <?php echo  $post -> category -> name ?></i></a>
+                                <li><a href="../about/andriipavlenko"><i class="icon-user"> <?php echo  $post -> authorId -> name ?></i></a>
+                                <li><a href="../about/andriipavlenko"><i class="icon-folder"> <?php echo  $post -> category -> name ?></i></a>
                                 </li>
                             </ul>
                             
@@ -62,11 +62,11 @@
                     
                     <div class="post-navigation clearfix">
                         <div class="col_half nobottommargin">
-                            <a href="<?php echo e(URL::to( $prev )); ?>"> &lArr; Предыдущая статья</a>
+                            <a href="<?php echo e(URL::to( '/blog/'.$prev )); ?>"> &lArr; Предыдущая статья</a>
                         </div>
 
                         <div class="col_half col_last tright nobottommargin">
-                            <a href="<?php echo e(URL::to( $next )); ?>">Следующая статья &rArr; </a>
+                            <a href="<?php echo e(URL::to( '/blog/'.$next )); ?>">Следующая статья &rArr; </a>
                         </div>
                     </div>
                     

@@ -7,14 +7,15 @@ use Illuminate\Http\Request;
 //use App\Http\Requests;
 use Mail;
 use Session;
-require ('date_of_training/date_of_training');
+//require ('date_of_training/date_of_training');
 
 class mailController extends Controller
 {
     public function postContact(Request $request) {
           $this->validate($request, [
              'template-contactform-email' => 'required|email',
-//              'template-contactform-message' => 'min:10'
+              'template-contactform-name' => 'min:3',
+              'template-contactform-phone' => 'required|min:4|numeric'
              ]);
 
         $name = isset( $_POST['template-contactform-name'] ) ? $_POST['template-contactform-name'] : '';
@@ -38,11 +39,11 @@ class mailController extends Controller
                     $message->subject($data['subject']);
         });
 
-
-
         Session::flash('success', 'Your email was sent!');
 
         return redirect('/');
+
+
 
 
     }

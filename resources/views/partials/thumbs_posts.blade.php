@@ -1,7 +1,3 @@
-<!-- * Created by IntelliJ IDEA.-->
-<!-- * User: Леся-->
-<!-- * Date: 06.03.2017-->
-<!-- * Time: 13:35-->
 <div class="col_half col_last">
     <div class="fancy-title title-center title-dotted-border topmargin">
         <h3>Последние посты</h3>
@@ -12,11 +8,11 @@
         <div class="oc-item">
             <div class="ipost clearfix">
                 <div class="entry-image clearfix">
-                    <a href="blog/what-is-management30" class="nobg"><img
-                                src="images/blog/what-is-management30-title.jpg" alt=""></a>
+                    <a href="../blog/what-is-management30" class="nobg"><img
+                                src="{{ URL::asset('images/blog/what-is-management30-title.jpg') }}" alt=""></a>
                 </div>
                 <div class="entry-title">
-                    <h3><a href="blog/what-is-management30">Что такое Management30? История и описание</a></h3>
+                    <h3><a href="../blog/what-is-management30">Что такое Management30? История и описание</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
                 </ul>
@@ -30,11 +26,11 @@
         <div class="oc-item">
             <div class="ipost clearfix">
                 <div class="entry-image clearfix">
-                    <a href="blog/top-10-fails-of-scrum-teams" class="nobg"><img
-                                src="images/blog/10-fails-of-scrum-teams.jpg" alt=""></a>
+                    <a href="../blog/top-10-fails-of-scrum-teams" class="nobg"><img
+                                src="{{ URL::asset('images/blog/10-fails-of-scrum-teams.jpg') }}" alt=""></a>
                 </div>
                 <div class="entry-title">
-                    <h3><a href="blog/top-10-fails-of-scrum-teams.php">ТОП-10 ошибок, которые делают 90%
+                    <h3><a href="../blog/top-10-fails-of-scrum-teams">ТОП-10 ошибок, которые делают 90%
                             Scrum-команд</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
@@ -51,11 +47,11 @@
         <div class="oc-item">
             <div class="ipost clearfix">
                 <div class="entry-image clearfix">
-                    <a href="blog/30-metrics-to-scrum-team-succes" class="nobg"><img
-                                src="images/blog/30-metrix-title.jpg" alt=""></a>
+                    <a href="../blog/30-metrics-to-scrum-team-succes" class="nobg">
+                        <img src="{{ URL::asset('images/blog/30-metrix-title.jpg') }}"  alt=""></a>
                 </div>
                 <div class="entry-title">
-                    <h3><a href="blog/30-metrics-to-scrum-team-succes">30 метрик успешности для Scrum-команд</a></h3>
+                    <h3><a href="../blog/30-metrics-to-scrum-team-succes">30 метрик успешности для Scrum-команд</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
                 </ul>
@@ -69,10 +65,10 @@
         <div class="oc-item">
             <div class="ipost clearfix">
                 <div class="entry-image clearfix">
-                    <a href="blog/scrum-history" class="nobg"><img src="images/blog/scrum-history.jpg" alt=""></a>
+                    <a href="../blog/scrum-history" class="nobg"><img src="{{ URL::asset('images/blog/scrum-history.jpg') }}" alt=""></a>
                 </div>
                 <div class="entry-title">
-                    <h3><a href="blog/scrum-history">Scrum History, или как все начиналось</a></h3>
+                    <h3><a href="../blog/scrum-history">Scrum History, или как все начиналось</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
                 </ul>
@@ -86,10 +82,10 @@
         <div class="oc-item">
             <div class="ipost clearfix">
                 <div class="entry-image clearfix">
-                    <a href="blog/17-steps" class="nobg"><img src="images/blog/17-steps.png" alt=""></a>
+                    <a href="../blog/17-steps" class="nobg"><img src="{{ URL::asset('images/blog/17-steps-slider.png') }}" alt=""></a>
                 </div>
                 <div class="entry-title">
-                    <h3><a href="blog/17-steps">Владелец Продукта: 17 шагов от хорошего к великому</a></h3>
+                    <h3><a href="../blog/17-steps">Владелец Продукта: 17 шагов от хорошего к великому</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
                 </ul>
@@ -103,11 +99,11 @@
         <div class="oc-item">
             <div class="ipost clearfix">
                 <div class="entry-image clearfix">
-                    <a href="blog/top-5-dev-team-main-characteristics" class="nobg"><img
-                                src="images/blog/top-5-title.png" alt=""></a>
+                    <a href="../blog/top-5-dev-team-main-characteristics" class="nobg"><img
+                                src="{{ URL::asset('images/blog/top-5-title.jpg') }}" alt=""></a>
                 </div>
                 <div class="entry-title">
-                    <h3><a href="blog/top-5-dev-team-main-characteristics">ТОП-5 обязательных характеристик Команды
+                    <h3><a href="../blog/top-5-dev-team-main-characteristics">ТОП-5 обязательных характеристик Команды
                             Разработки</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
