@@ -49,6 +49,10 @@ Route::group(['middleware' => 'web'], function () {
             return view('pages.course-scrum.course-scrum');
         })->middleware('auth');
 
+        Route::get('/coming-soon', function() {
+            return view('pages.coming-soon.coming-soon');
+    });
+
 
 
         Route::get('/install', function () {

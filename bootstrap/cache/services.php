@@ -141,6 +141,7 @@
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
   ),
+
   'when' => 
   array (
     'Illuminate\\Broadcasting\\BroadcastServiceProvider' => 

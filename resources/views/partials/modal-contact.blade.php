@@ -38,8 +38,9 @@
 
                             <div class="col-md-6">
                                 <label for="template-contactform-phone">Телефон</label>
+                                <small>*</small>
                                 <input type="text" id="template-contactform-phone" name="template-contactform-phone"
-                                       value=""  class="sm-form-control"/>
+                                       value=""  class="required sm-form-control"/>
                             </div>
 
 

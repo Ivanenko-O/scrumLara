@@ -1,4 +1,4 @@
-<?php  include(app_path().'/date_of_traning/date_of_traning.php');?>
+<?php  include(app_path().'/date_of_traning/date_of_traning.php'); ?>
 <?php echo $__env->make("partials.modal-contact", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix dark">
 
