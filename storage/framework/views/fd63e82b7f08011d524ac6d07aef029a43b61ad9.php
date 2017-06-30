@@ -40,7 +40,7 @@
                             <div class="col-md-6">
                                 <label for="template-contactform-phone">Телефон</label>
                                 <small>*</small>
-                                <input type="phone" id="template-contactform-phone" name="template-contactform-phone"
+                                <input type="text" id="template-contactform-phone" name="template-contactform-phone"
                                        value=""  class="required sm-form-control"/>
                             </div>
 
