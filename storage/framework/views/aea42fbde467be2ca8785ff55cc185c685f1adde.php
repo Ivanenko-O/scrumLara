@@ -74,7 +74,15 @@
 
                 <div class="contact-widget" data-alert-type="inline">
 
-                    <div class="contact-form-result"></div>
+                    <div class="contact-form-result">
+                        <?php if(session('success')): ?>
+                            <div class="flash-message">
+                                <div class="alert alert-success">
+                                    Cообщение доставлено успешно
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
 
                     <form class="nobottommargin" action="<?php echo e(route('mail.contact')); ?>" method="POST">
 
@@ -147,6 +155,7 @@
                             <button class="button button-3d nomargin" type="submit"  value="submit">Отправить сообщение
                             </button>
                         </div>
+
 
                     </form>
 

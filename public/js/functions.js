@@ -131,18 +131,6 @@ var SEMICOLON = SEMICOLON || {};
 	// USE STRICT
 	"use strict";
 
-	// var isNormalPage = $('body').hasClass('normal-page');
-	// var isInnerPage = $('body').hasClass('inner-page');
-
-	// $(function(){
-
-		// if (isNormalPage) (...).load(...)
-		// if (isInnerPage) (...).load(...)
-
-		// $(".header__inner").load("partials/header.html", SEMICOLON.documentOnReady.init );
-
-		// $(".footer__inner").load("partials/footer.html");
-	// });
 
 	SEMICOLON.initialize = {
 

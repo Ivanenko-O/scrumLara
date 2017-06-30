@@ -23,7 +23,7 @@
                 <div class="heading-block nobottomborder">
                     <h4>Ой! Запрашиваемая Вами страница не может быть найдена.</h4>
                     <span>Пожалуйста, откройте меню вверху и выберите интересующую Вас страницу.</span>
-                    <img src="images/404.gif"/>
+                    <img src="{{ URL::asset('images/404.gif') }}"/>
                 </div>
             </div>
 

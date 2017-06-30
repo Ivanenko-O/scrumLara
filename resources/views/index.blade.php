@@ -29,16 +29,7 @@
     @include("layouts.top-bar")
     @include("layouts.header")
 
-
-        {{--@if (session('success'))--}}
-            {{--<div class="flash-message">--}}
-                {{--<div class="alert alert-success">--}}
-                    {{--Cообщение доставлено успешно--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--@endif--}}
-
-    {{-- dinamic part. define in each folder of page --}}
+        {{-- dinamic part. define in each folder of page --}}
     @yield('content')
     {{-- end dinamic part --}}
 
@@ -53,14 +44,11 @@
 
 {{--External JavaScripts --}}
 <script src="{{ URL::asset ('js/jquery.min.js') }}"></script>
-
+{{--<script>$(".alert").alert('close')</script>--}}
 <script src="{{ URL::asset ('js/plugins.js') }}"></script>
-
-
 
 {{-- Footer Scripts --}}
 <script type="text/javascript" src="{{ URL::asset ('js/functions.js')}}"></script>
-
 
 
 

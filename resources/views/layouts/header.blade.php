@@ -150,3 +150,12 @@
 
 </header>
 {{-- #header end --}}
+@if (session('success'))
+    <div class="flash-message">
+        <div class="alert alert-success">
+            Cообщение доставлено успешно
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        </div>
+
+    </div>
+@endif

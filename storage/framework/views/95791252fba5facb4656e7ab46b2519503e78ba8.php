@@ -29,16 +29,7 @@
     <?php echo $__env->make("layouts.top-bar", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <?php echo $__env->make("layouts.header", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-
         
-            
-                
-                    
-                
-            
-        
-
-    
     <?php echo $__env->yieldContent('content'); ?>
     
 
@@ -57,10 +48,7 @@
 <script src="<?php echo e(URL::asset ('js/plugins.js')); ?>"></script>
 
 
-
-
 <script type="text/javascript" src="<?php echo e(URL::asset ('js/functions.js')); ?>"></script>
-
 
 
 

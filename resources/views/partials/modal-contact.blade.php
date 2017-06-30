@@ -18,7 +18,18 @@
 
                     <div class="contact-widget bottommargin-sm">
 
-                        <div class="contact-form-result"></div>
+                        <div class="contact-form-result" >
+                            @if (session('success'))
+                                <div class="flash-message">
+                                    <div class="alert alert-success">
+                                        Cообщение доставлено успешно
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    </div>
+                                </div>
+
+                            @endif
+                        </div>
+
 
                         <form class="nobottommargin" id="template-contactform" name="template-contactform" action="{{ route('mail.contact') }}" method="POST">
                             {{ csrf_field() }}

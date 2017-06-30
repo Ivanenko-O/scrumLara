@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+//use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
 //use App\Http\Requests;
+
+
+
 use Mail;
 use Session;
 //require ('date_of_training/date_of_training');
@@ -22,6 +26,8 @@ class mailController extends Controller
         $email = isset( $_POST['template-contactform-email'] ) ? $_POST['template-contactform-email'] : '';
         $phone = isset( $_POST['template-contactform-phone'] ) ? $_POST['template-contactform-phone'] : '';
         $body = isset( $_POST['template-contactform-message'] ) ? $_POST['template-contactform-message'] : '';
+        $link = $_SERVER['HTTP_REFERER'] ? 'Страница регистрации: ' . $_SERVER['HTTP_REFERER'] : '';
+
 
         $subject = 'Регистрация';
 
@@ -30,7 +36,8 @@ class mailController extends Controller
             'name' => $name,
             'subject' => $subject,
             'phone' => $phone,
-            'body' => $body
+            'body' => $body,
+            'link' => $link
         );
 
             Mail::send('emails.contact',  $data, function($message)use ($data){
@@ -41,6 +48,7 @@ class mailController extends Controller
 
         Session::flash('success', 'Your email was sent!');
 
-        return redirect('/');
+        return redirect($request->headers->get('referer', '/'));
+
     }
 }

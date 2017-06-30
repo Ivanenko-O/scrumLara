@@ -18,7 +18,18 @@
 
                     <div class="contact-widget bottommargin-sm">
 
-                        <div class="contact-form-result"></div>
+                        <div class="contact-form-result" >
+                            <?php if(session('success')): ?>
+                                <div class="flash-message">
+                                    <div class="alert alert-success">
+                                        Cообщение доставлено успешно
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    </div>
+                                </div>
+
+                            <?php endif; ?>
+                        </div>
+
 
                         <form class="nobottommargin" id="template-contactform" name="template-contactform" action="<?php echo e(route('mail.contact')); ?>" method="POST">
                             <?php echo e(csrf_field()); ?>
