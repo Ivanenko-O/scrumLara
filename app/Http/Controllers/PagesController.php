@@ -20,7 +20,6 @@ class PagesController extends Controller {
         return view('pages.contact.contact');
     }
 
-
     public function getAnalysis() {
          return view ('pages.services.analysis-and-implementation.analysis-and-implementation');
     }
