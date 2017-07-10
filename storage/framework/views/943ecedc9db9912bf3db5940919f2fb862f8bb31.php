@@ -1,29 +1,17 @@
 <?php  include(app_path().'/date_of_traning/date_of_traning.php');?>
 <?php echo $__env->make("partials.modal-contact", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix dark">
+<section class="slider-parallax swiper_wrapper full-screen clearfix dark">
 
         <div class="swiper-container swiper-parent">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('images/master-scrum-bg.png');">
-                    <div class="container clearfix">
-                        <div class="slider-caption dark slider-caption-center">
+                <div class="swiper-slide" style="background-image: url('images/master-scrum-bg.png'); width:100vw; height: 90vh;">
+                    <div class="container clearfix vertical-middle">
+                        <div class="slider-caption slider-caption-center">
                             <h1>Мастер Scrum</h1>
-                            <p data-animate="fadeInUp" data-delay="200">Мощная база для тех кто в теме Scrum</p>
+                            <p data-animate="fadeInUp" class="h1sm" data-delay="200">Мощная база для тех кто в теме Scrum</p>
                         </div>
                     </div>
-                </div> <!--
-				<div class="swiper-slide">
-					<div class="container clearfix">
-						<div class="slider-caption slider-caption-center">
-							<h2 data-caption-animate="fadeInUp">Beautifully Flexible</h2>
-							<p data-caption-animate="fadeInUp" data-caption-delay="200">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
-			<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
-			<div id="slide-number"><div id="slide-number-current"></div><span>/</span><div id="slide-number-total"></div> -->
+                </div>
             </div>
         </div>
 

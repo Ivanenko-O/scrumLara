@@ -36,7 +36,7 @@
                                     <div class="entry-c">
                                         <div class="entry-title">
                                             <h4>
-                                                <a href="{{ url($g_post_cat_2 -> slug) }}">{{ $g_post_cat_2 -> title }}</a></h4>
+                                                <a href="{{ url('/blog/'.$g_post_cat_2 -> slug) }}">{{ $g_post_cat_2 -> title }}</a></h4>
                                         </div>
                                         <ul class="entry-meta">
                                             <li>{{  $g_post_cat_2-> created_at->format('j M Y') }}</li>
@@ -55,19 +55,19 @@
 
             <div class="col_one_third col_last">
 
-                {{--<div class="widget subscribe-widget clearfix">--}}
-                    {{--<h5><strong>Подпишитесь</strong> на нашу рассылку, чтобы получать статьи на тематику Agile, Scrum и наш еженедельный дайджест.</h5>--}}
-                    {{--<div class="widget-subscribe-form-result"></div>--}}
-                    {{--<form id="widget-subscribe-form" action="../js/subscribe.php" role="form" method="post" class="nobottommargin">--}}
-                        {{--<div class="input-group divcenter">--}}
-                            {{--<span class="input-group-addon"><i class="icon-email2"></i></span>--}}
-                            {{--<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Введите Ваш Email">--}}
-                            {{--<span class="input-group-btn">--}}
-										{{--<button class="btn btn-green" type="submit">Подписаться</button>--}}
-									{{--</span>--}}
-                        {{--</div>--}}
-                    {{--</form>--}}
-                {{--</div>--}}
+                <div class="widget subscribe-widget clearfix">
+                    <h5><strong>Подпишитесь</strong> на нашу рассылку, чтобы получать статьи на тематику Agile, Scrum и наш еженедельный дайджест.</h5>
+                    <div class="widget-subscribe-form-result"></div>
+                    <form id="widget-subscribe-form" action="../js/subscribe.php" role="form" method="post" class="nobottommargin">
+                        <div class="input-group divcenter">
+                            <span class="input-group-addon"><i class="icon-email2"></i></span>
+                            <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Введите Ваш Email">
+                            <span class="input-group-btn">
+										<button class="btn btn-green" type="submit">Подписаться</button>
+									</span>
+                        </div>
+                    </form>
+                </div>
 
                 <div class="widget clearfix" style="margin-bottom: -20px;">
 

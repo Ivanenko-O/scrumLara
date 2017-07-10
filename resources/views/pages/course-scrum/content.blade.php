@@ -1,9 +1,9 @@
 <section id="page-title">
 
+
     <div class="container clearfix">
         <h1>НАЗВАНИЕ КУРСА</h1>
     </div>
-
 </section>
 
 <div class="clearfix"></div>
@@ -24,6 +24,8 @@
                             <li><a href="{{ url('/login') }}">Войти</a></li>
                             <li><a href="{{ url('/register') }}">Регистрация</a></li>
                         @endif
+
+
                     @endif
                 </ul>
             </nav>
@@ -48,8 +50,21 @@
         <div class="section dark center notopmargin">
             <div class="container clearfix">
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Qk1f2wMKZ5U?ecver=1" frameborder="0"
-                        allowfullscreen></iframe>
+
+                @foreach($payments as $payment)
+                    {{ ($payment->state) }}
+                    @if ($payment->state === 0)
+                        its  a cool cource - buy it
+
+                        {{--{{ $payment->state }}--}}
+                    @else
+                        enjoy video
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qk1f2wMKZ5U?ecver=1"
+                                frameborder="0"
+                                allowfullscreen></iframe>
+
+                    @endif
+                @endforeach
             </div>
         </div>
         <!-- .video end -->

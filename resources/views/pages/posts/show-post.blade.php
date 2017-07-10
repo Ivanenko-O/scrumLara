@@ -1,5 +1,14 @@
 <?php  include(app_path().'/date_of_traning/date_of_traning.php');?>
 @extends('index')
+@section('title', $post->seo_title)
+
+
+
+@section('meta')
+    <meta name="description" content="{{ $post->meta_description }}">
+    <meta name="author" content="Andrii Pavlenko"/>
+    <meta name="keywords" content="{{ $post->meta_keywords }}">
+@endsection
 
 @section('content')
 

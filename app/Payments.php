@@ -7,22 +7,18 @@ use App\User;
 
 class Payments extends Model
 {    //
-
-    public function getAllPayments() {
-        $payments = Payments::find(1)->user;
-//        dd($payments);
+    public function getPayments() {
+        $payments = Payments::find(1) -> with('user') -> get();
+        dd($payments);
         return $payments;
     }
-
-    public function getUserPayments(){
-
-    }
-
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function user() {
-        return $this->belongsTo('App\User', 'id', 'user_id');
+
+        return $this->belongsTo('App\User','user_id',  'id', 'name');
     }
 }
+

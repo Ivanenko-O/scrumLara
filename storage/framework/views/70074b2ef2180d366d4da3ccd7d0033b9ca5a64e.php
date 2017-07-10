@@ -1,5 +1,6 @@
-<!-- Sidebar
-============================================= -->
+<!-- Sidebar -->
+
+
 
 <div class="widget subscribe-widget clearfix">
     <h5>Подпишитесь на нашу рассылку, чтобы получать статьи на тематику <strong>Agile, Scrum </strong>и наш еженедельный

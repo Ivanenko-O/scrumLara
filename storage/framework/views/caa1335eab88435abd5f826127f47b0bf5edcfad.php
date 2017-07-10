@@ -7,8 +7,12 @@
 
                 <div class="panel-body">
                     Вы авторизировались!
+
+                    <p>Перейти к обучающему курсу:
+                    <a href="<?php echo e(url('/list-courses')); ?>">Scrum0</a>
                 </div>
             </div>
+            {{}}
         </div>
     </div>
 </div>

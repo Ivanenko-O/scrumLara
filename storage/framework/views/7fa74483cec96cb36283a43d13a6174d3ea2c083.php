@@ -1,5 +1,14 @@
 <?php  include(app_path().'/date_of_traning/date_of_traning.php');?>
 
+<?php $__env->startSection('title', $post->seo_title); ?>
+
+
+
+<?php $__env->startSection('meta'); ?>
+    <meta name="description" content="<?php echo e($post->meta_description); ?>">
+    <meta name="author" content="Andrii Pavlenko"/>
+    <meta name="keywords" content="<?php echo e($post->meta_keywords); ?>">
+<?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
 

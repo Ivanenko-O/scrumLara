@@ -48,9 +48,13 @@ if( isset( $email ) AND $email != '' ) {
 	$data = json_decode($result);
 
 	if ( isset( $data->status ) AND $data->status == 'subscribed' ){
+
 		echo '{ "alert": "success", "message": "Вы <strong>успешно</strong> подписались на рассылку статей по тематике Agile, Scrum." }';
+        return redirect('/');
 	} else {
-		echo '{ "alert": "error", "message": "' . $data->title . '" }';
+        redirect('/');
+		echo '{ "alert": "error", "message": "cancelled" }';
+
 	}
 
 }

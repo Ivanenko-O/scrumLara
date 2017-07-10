@@ -1,6 +1,5 @@
 <h1><b>Тренинг ScrumMasters.com.ua</b> </h1>
 <div>
-
     <strong> {{$name}}
         @if (!($name))
             Добрый день

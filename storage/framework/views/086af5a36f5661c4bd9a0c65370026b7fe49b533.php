@@ -1,12 +1,12 @@
 <?php  include(app_path().'/date_of_traning/date_of_traning.php'); ?>
 <?php echo $__env->make("partials.modal-contact", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-    <section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix dark">
+    <section class="slider-parallax swiper_wrapper full-screen clearfix dark">
 
         <div class="swiper-container swiper-parent">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('images/scrum0-bg.png');">
-                    <div class="container clearfix">
-                        <div class="slider-caption dark slider-caption-center">
+                <div class="swiper-slide" style="background-image: url('images/scrum0-bg.png'); width:100vw; height: 90vh;">
+                    <div class="container clearfix vertical-middle">
+                        <div class="slider-caption slider-caption-center">
                             <h1>Scrum с нуля</h1>
                             <p data-animate="fadeInUp" data-delay="200">Однодневный игровой тренинг для новичков в
                                 Скрам</p>

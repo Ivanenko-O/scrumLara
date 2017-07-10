@@ -3,6 +3,11 @@
         #Options -MultiViews
     </IfModule>
 
+    # 1 Month for most static assets
+    <FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+      Header set Cache-Control "max-age=2592000"
+    </FilesMatch>
+
     RewriteEngine On
 
     #enable symbolic links

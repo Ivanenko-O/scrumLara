@@ -137,7 +137,7 @@
 
                 </div>
 
-            @include('partials.modal-contact');
+            @include('partials.modal-contact')
 
             {{-- Sidebar --}}
                 <div class="sidebar nobottommargin col_last clearfix">

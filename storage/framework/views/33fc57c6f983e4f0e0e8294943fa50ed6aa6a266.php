@@ -1,6 +1,5 @@
 
 <section id="page-title">
-
     <div class="container clearfix">
         <h1>Блог</h1>
         <span>Наши последние статьи и новости из жизни Scrummasters</span>
@@ -8,7 +7,20 @@
             <li><a href="<?php echo e(url('')); ?>">Главная</a></li>
             <li class="active">Блог</li>
         </ol>
+        <form action="/search" class="search_form" method="get" autocomplete="off">
+            <?php echo e(csrf_field()); ?>
+
+            <div class="form-field">
+                <input type="text" name="s" class="search_keyword" id="search_keyword_id"
+                       placeholder="Поиск " required/>
+                <button type="submit" class="search_button" onclick="submitdata()">Поиск</button>
+                <div id="result">
+
+                </div>
+            </div>
+        </form>
     </div>
+
 
 </section>
 

@@ -9,8 +9,12 @@
 
                 <div class="panel-body">
                     Вы авторизировались!
+
+                    <p>Перейти к обучающему курсу:
+                    <a href="{{ url('/list-courses') }}">Scrum0</a>
                 </div>
             </div>
+            {{}}
         </div>
     </div>
 </div>
