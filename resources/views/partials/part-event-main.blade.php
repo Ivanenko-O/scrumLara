@@ -1,9 +1,3 @@
-
-<!-- * Created by IntelliJ IDEA.-->
-<!-- * User: Леся-->
-<!-- * Date: 06.03.2017-->
-<!-- * Time: 13:06-->
-
 <div class="container bottommargin clearfix">
 
     <div class="col_full">
@@ -21,8 +15,8 @@
                     <h3><a href="scrum0">Scrum с нуля - однодневный тренинг</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
-                    <li><i class="icon-calendar3"></i> 15 Апреля</li>
-                    <li><a><i class="icon-map-marker">  Киев</i></a></li>
+                    <li><i class="icon-calendar3"></i><?php echo $date3_scrum0." ".$month3_scrum0; ?></li>
+                    <li><a><i class="icon-map-marker"> <?php echo $city3_scrum0; ?></i></a></li>
                 </ul>
                 <div class="entry-content">
                     <p>Тренинг для начинающих свой путь в Scrum и тех, у кого практический опыт меньше 3 лет.
@@ -31,7 +25,7 @@
                 </div>
                 <a href="scrum0"
                    class="button button-reveal button-border button-dark button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Узнать детали</span><i
-                        class="icon-angle-right"></i></a>
+                            class="icon-angle-right"></i></a>
             </div>
         </div>
 
@@ -44,8 +38,8 @@
                     <h3><a href="master-of-scrum">Мастер Scrum - двухдневный тренинг</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
-                    <li><i class="icon-calendar3"></i> 21-22 Апреля</li>
-                    <li><a><i class="icon-map-marker">  Харьков</i></a></li>
+                    <li><i class="icon-calendar3"></i> <?php echo $date3_master." ".$month3_master; ?></li>
+                    <li><a><i class="icon-map-marker"> <?php echo $city3_master; ?></i></a></li>
                 </ul>
                 <div class="entry-content">
                     <p>Игровой тренинг для управленцев, желающих узнать все самые важные аспекты Scrum от А до Я, и
@@ -53,30 +47,28 @@
                 </div>
                 <a href="master-of-scrum"
                    class="button button-reveal button-border button-dark button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Читать о тренинге</span><i
-                        class="icon-angle-right"></i></a>
+                            class="icon-angle-right"></i></a>
             </div>
         </div>
 
         <div class="col_one_third col_last nobottommargin">
             <div class="ipost clearfix">
                 <div class="entry-image">
-                    <a href="coming-soon"><img class="image_fade" src="images/scrum-advanced-banner.jpg" alt="Image"></a>
+                    <a href="management30"><img class="image_fade" src="images/management30-banner.jpg" alt="Management30"></a>
                 </div>
                 <div class="entry-title">
-                    <h3><a href="coming-soon">Scrum Advanced - трехдневный практикум </a></h3>
+                    <h3><a href="management30">Management30 - практикум по Agile для бизнес стороны</a></h3>
                 </div>
                 <ul class="entry-meta clearfix">
-                    <li><i class="icon-calendar3"></i> Дата уточняется</li>
-                    <!-- <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li> -->
+                    <li><i class="icon-calendar3"></i> <?php echo $date1_mgm30." ".$month1_mgm30; ?></li>
+                    <li><a><i class="icon-map-marker"> <?php echo $city1_mgm30; ?></i></a></li>
                 </ul>
                 <div class="entry-content">
-                    <p>Глубокая проработка практик Scrum для тех, кто уже обладает солидным багажом знаний, или
-                        имеют опыт 5+ лет. Тренинг также прекрасно подходит для тех, кто уже имеет сертификат по
-                        Scrum.</p>
+                    <p>Практикум по Agile для бизнес стороны – для руководителей, менеджеров, лидеров команд и Скрам-мастеров...</p>
                 </div>
-                <a href="coming-soon"
+                <a href="management30"
                    class="button button-reveal button-border button-dark button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Больше деталей</span><i
-                        class="icon-angle-right"></i></a>
+                            class="icon-angle-right"></i></a>
             </div>
         </div>
 

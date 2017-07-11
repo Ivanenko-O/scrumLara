@@ -7,17 +7,17 @@
             <li><a href="{{url('')}}">Главная</a></li>
             <li class="active">Блог</li>
         </ol>
-        <form action="/search" class="search_form" method="get" autocomplete="off">
-            {{ csrf_field() }}
-            <div class="form-field">
-                <input type="text" name="s" class="search_keyword" id="search_keyword_id"
-                       placeholder="Поиск " required/>
-                <button type="submit" class="search_button" onclick="submitdata()">Поиск</button>
-                <div id="result">
+        {{--<form action="/search" class="search_form" method="get" autocomplete="off">--}}
+            {{--{{ csrf_field() }}--}}
+            {{--<div class="form-field">--}}
+                {{--<input type="text" name="s" class="search_keyword" id="search_keyword_id"--}}
+                       {{--placeholder="Поиск " required/>--}}
+                {{--<button type="submit" class="search_button" onclick="submitdata()">Поиск</button>--}}
+                {{--<div id="result">--}}
 
-                </div>
-            </div>
-        </form>
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</form>--}}
     </div>
 
 
@@ -55,7 +55,7 @@
                                 {{--                                <a href="{{ route('pages.posts.show-post', $post->slug) }}" class="btn btn-primary"><h2> {{ $post -> title }}</h2></a>--}}
                             </div>
                             <ul class="entry-meta clearfix">
-                                <li><i class="icon-user"></i>{{ $post -> authorId -> name }}</li>
+                                <li><a href="/about/andriipavlenko"><i class="icon-user"></i>{{ $post -> authorId -> name }}</a> </li>
                                 <li><i class="icon-folder-open"></i>{{ $post -> category -> name }}</li>
                             </ul>
                             <div class="entry-content">

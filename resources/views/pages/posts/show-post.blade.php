@@ -43,7 +43,7 @@
                             <ul class="entry-meta clearfix">
                                 <li><i class="icon-calendar3"></i><?php echo $post -> created_at ->format(' j M y') ?></li>
                                 <li><a href="../about/andriipavlenko"><i class="icon-user"> <?php echo  $post -> authorId -> name ?></i></a>
-                                <li><a href="../about/andriipavlenko"><i class="icon-folder"> <?php echo  $post -> category -> name ?></i></a>
+                                <li><i class="icon-folder"> <?php echo  $post -> category -> name ?></i>
                                 </li>
                             </ul>
                             {{--  .entry-meta end --}}

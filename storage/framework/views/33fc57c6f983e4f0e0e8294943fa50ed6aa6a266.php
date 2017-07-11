@@ -7,18 +7,17 @@
             <li><a href="<?php echo e(url('')); ?>">Главная</a></li>
             <li class="active">Блог</li>
         </ol>
-        <form action="/search" class="search_form" method="get" autocomplete="off">
-            <?php echo e(csrf_field()); ?>
+        
+            
+            
+                
+                       
+                
+                
 
-            <div class="form-field">
-                <input type="text" name="s" class="search_keyword" id="search_keyword_id"
-                       placeholder="Поиск " required/>
-                <button type="submit" class="search_button" onclick="submitdata()">Поиск</button>
-                <div id="result">
-
-                </div>
-            </div>
-        </form>
+                
+            
+        
     </div>
 
 
@@ -57,7 +56,7 @@
                                 
                             </div>
                             <ul class="entry-meta clearfix">
-                                <li><i class="icon-user"></i><?php echo e($post -> authorId -> name); ?></li>
+                                <li><a href="/about/andriipavlenko"><i class="icon-user"></i><?php echo e($post -> authorId -> name); ?></a> </li>
                                 <li><i class="icon-folder-open"></i><?php echo e($post -> category -> name); ?></li>
                             </ul>
                             <div class="entry-content">

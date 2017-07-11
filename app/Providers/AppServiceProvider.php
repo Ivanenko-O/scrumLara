@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
     {
 
         $g_posts_cat_1 = $posts -> getLimitedAndSortedBy(4, 1);
-        $g_posts_cat_2 = $posts -> getLimitedAndSortedBy(10, 2);
+        $g_posts_cat_2 = $posts -> getLimitedAndSortedBy(7, 2);
 
         $shared_data = [
             'g_posts_cat_1' => $g_posts_cat_1,

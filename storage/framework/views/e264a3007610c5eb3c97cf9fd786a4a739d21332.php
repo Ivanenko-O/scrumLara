@@ -4,7 +4,7 @@
 
         <div class="swiper-container swiper-parent">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('images/scrum0-bg.png');">
+                <div class="swiper-slide" style="background-image: url('images/scrum0-bg.png'); width:100vw; height: 90vh;">
                     <div class="container clearfix vertical-middle">
                         <div class="slider-caption slider-caption-center">
                             <h1>Тренинг "Management30"</h1>

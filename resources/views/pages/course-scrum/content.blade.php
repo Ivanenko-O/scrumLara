@@ -51,9 +51,9 @@
             <div class="container clearfix">
 
 
-                @foreach($payments as $payment)
-                    {{ ($payment->state) }}
-                    @if ($payment->state === 0)
+                @foreach($subscription as $sub)
+                    {{ ($sub->state) }}
+                    @if ($sub->state === 0)
                         its  a cool cource - buy it
 
                         {{--{{ $payment->state }}--}}

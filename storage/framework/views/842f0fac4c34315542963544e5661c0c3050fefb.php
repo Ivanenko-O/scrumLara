@@ -18,20 +18,38 @@
 
 <section id="content">
 
+    <!--<div class="content-wrap topmargin-sm ">-->
+    <?php  include(app_path().'/date_of_traning/date_of_traning.php'); ?>
+    <?php echo $__env->make("partials.modal-contact", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
     <div class="content-wrap topmargin-sm ">
         <div id="oc-images"
              class="owl-carousel owl-carousel-full news-carousel header-stick nobottommargin carousel-widget"
              data-margin="3" data-loop="true" data-stage-padding="50" data-pagi="false" data-items-xs="1"
              data-items-lg="2">
+
+
             <div class="oc-item">
-                <a href="blog/what-is-management30"><img src="images/what-is-management30-slider.jpg"
-                                                         alt="what is Management30"></a>
-                <div class="overlay">
+                <a href="blog/agile-world-statistics-2016"><img src="images/statisctics-2016-slider.jpg" alt="what is Management30"></a>
+                <div>
                     <div class="text-overlay">
                         <span class="label label-default">Статьи</span>
                         <div class="text-overlay-title">
+                            <h2><span>Мировая статистика по Agile за 2016 год</span></h2>
+                        </div>
+                        <a href="blog/agile-world-statistics-2016"
+                           class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Читать статью</span><i
+                                    class="icon-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="oc-item">
+                <a href="blog/what-is-management30"><img src="images/what-is-management30-slider.jpg" alt="what is Management30"></a>
+                <div>
+                    <div class="text-overlay">
+                        <span class="label label-default">Статьи</span>
+                        <div class="text-overlay-title">
                             <h2><span>Что такое Management30? История и описание</span></h2>
                         </div>
                         <a href="blog/what-is-management30"
@@ -41,9 +59,8 @@
                 </div>
             </div>
             <div class="oc-item">
-                <a href="blog/top-10-fails-of-scrum-teams"><img src="images/10-fails-of-scrum-teams-slider.jpg"
-                                                                alt="10 fails of Scrum teams"></a>
-                <div class="overlay">
+                <a href="blog/top-10-fails-of-scrum-teams"><img src="images/10-fails-of-scrum-teams-slider.jpg" alt="10 fails of Scrum teams"></a>
+                <div>
                     <div class="text-overlay">
                         <span class="label label-default">Статьи</span>
                         <div class="text-overlay-title">
@@ -57,42 +74,41 @@
             </div>
             <div class="oc-item">
                 <a href="scrum0"><img src="images/scrum0-slider-image.jpg" alt="Scrum0"></a>
-                <div class="overlay">
+                <div>
                     <div class="text-overlay">
-                        
+                        <span class="label label-default">Открытый тренинг - <?php echo $city1_scrum0 ?></span>
                         <div class="text-overlay-title">
                             <h2><span>Scrum с нуля</span></h2>
                         </div>
                         <div class="text-overlay-meta">
-                            
+                            <span><?php echo $date3_scrum0." ".$month3_scrum0  ?> 2017</span>
                         </div>
                         <a href="scrum0"
-                           class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Подробнее о тренинге</span><i
+                           class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Подробнее</span><i
                                     class="icon-angle-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="oc-item">
                 <a href="master-of-scrum"><img src="images/master-scrum-slider-image.png" alt="Master Scrum"></a>
-                <div class="overlay">
+                <div>
                     <div class="text-overlay">
-                        
+                        <span class="label label-default">Открытый тренинг - <?php echo $city1_master ?></span>
                         <div class="text-overlay-title">
                             <h2><span>Master Scrum</span></h2>
                         </div>
                         <div class="text-overlay-meta">
-                            
+                            <span><?php echo $date3_master." ".$month3_master  ?> 2017</span>
                         </div>
                         <a href="master-of-scrum"
-                           class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Подробнее о тренинге</span><i
+                           class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Подробнее</span><i
                                     class="icon-angle-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="oc-item">
-                <a href="blog/30-metrics-to-scrum-team-succes"><img src="images/30-metrics-slider.png"
-                                                                    alt="Image 3"></a>
-                <div class="overlay">
+                <a href="blog/30-metrics-to-scrum-team-succes"><img src="images/30-metrics-slider.jpg" alt="Image 3"></a>
+                <div>
                     <div class="text-overlay">
                         <span class="label label-default">Статьи</span>
                         <div class="text-overlay-title">
@@ -104,21 +120,6 @@
                     </div>
                 </div>
             </div>
-            <div class="oc-item">
-                <a href="blog/scrum-history"><img src="images/scrum-history-slider.png" alt="Image 4"></a>
-                <div class="overlay">
-                    <div class="text-overlay">
-                        <span class="label label-default">Статьи</span>
-                        <div class="text-overlay-title">
-                            <h2><span>Scrum History, или как все начиналось</span></h2>
-                        </div>
-                        <a href="blog/scrum-history"
-                           class="button button-reveal button-border button-light button-small button-rounded uppercase tright noleftmargin topmargin-sm"><span>Читать статью</span><i
-                                    class="icon-angle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <div class="clear"></div>
     </div>
@@ -135,7 +136,7 @@
 
     </div>
 </a>
-<?php echo $__env->make("partials.modal-contact", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
 
 <div class="content-wrap nopadding">
 
@@ -205,10 +206,10 @@
             <div class="col-md-3 col-sm-12 ">
                 <div class="ipost clearfix">
                     <div class="entry-image">
-                        <a href="<?php echo e(url($g_post_cat_1 -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $g_post_cat_1->image )); ?>" alt="<?php echo e($g_post_cat_1->title); ?>"/> </a>
+                        <a href="<?php echo e(url('/blog/'.$g_post_cat_1 -> slug)); ?>"> <img src="<?php echo e(Voyager::image( $g_post_cat_1->image )); ?>" alt="<?php echo e($g_post_cat_1->title); ?>"/> </a>
                     </div>
                     <div class="entry-title">
-                        <h3><a href="<?php echo e(url($g_post_cat_1 -> slug)); ?>"><?php echo e($g_post_cat_1->title); ?> </a></h3>
+                        <h3><a href="<?php echo e(url('/blog/'.$g_post_cat_1 -> slug)); ?>"><?php echo e($g_post_cat_1->title); ?> </a></h3>
                     </div>
                     <ul class="entry-meta clearfix">
                         <li><i class="icon-calendar3"></i> <?php echo e($g_post_cat_1 -> created_at->format(' j M y')); ?></li>
@@ -241,10 +242,10 @@
                 <div class="oc-item">
                     <div class="ipost clearfix">
                         <div class="entry-image">
-                            <a href="<?php echo e(url($g_post_cat_2 -> slug)); ?>"> <img src="<?php echo e(Voyager::image($g_post_cat_2->image)); ?>" alt="<?php echo e($g_post_cat_2->title); ?>"></a>
+                            <a href="<?php echo e(url('/blog/'.$g_post_cat_2 -> slug)); ?>"> <img src="<?php echo e(Voyager::image($g_post_cat_2->image)); ?>" alt="<?php echo e($g_post_cat_2->title); ?>"></a>
                         </div>
                         <div class="entry-title">
-                            <h4><a href="<?php echo e(url($g_post_cat_2 -> slug)); ?>"><?php echo e($g_post_cat_2 -> title); ?></a></h4>
+                            <h4><a href="<?php echo e(url('/blog/'.$g_post_cat_2 -> slug)); ?>"><?php echo e($g_post_cat_2 -> title); ?></a></h4>
                         </div>
                         <ul class="entry-meta clearfix">
                             <li><i class="icon-calendar3"><?php echo e($g_post_cat_2 -> created_at->format('y M j')); ?></i></li>

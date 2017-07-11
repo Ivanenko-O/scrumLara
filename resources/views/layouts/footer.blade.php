@@ -74,37 +74,37 @@
                     <div class="row">
 
                         <div class="col-md-2 clearfix bottommargin-sm">
-                            <a href="https://www.facebook.com/AgileUA" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                            <a href="https://www.facebook.com/AgileUA" target="_blank" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
                                 <i class="icon-facebook"></i>
                                 <i class="icon-facebook"></i>
                             </a>
                         </div>
                         <div class="col-md-2 clearfix bottommargin-sm">
-                            <a href="https://vk.com/scrumup" class="social-icon si-dark si-colored si-vk nobottommargin" style="margin-right: 10px;">
+                            <a href="https://vk.com/scrumup" target="_blank" class="social-icon si-dark si-colored si-vk nobottommargin" style="margin-right: 10px;">
                                 <i class="icon-vk"></i>
                                 <i class="icon-vk"></i>
                             </a>
                         </div>
                         <div class="col-md-2 clearfix bottommargin-sm">
-                            <a href="https://www.youtube.com/channel/UCVevO1TGto6jr8MygeFLfOg" class="social-icon si-dark si-colored si-youtube nobottommargin" style="margin-right: 10px;">
+                            <a href="https://www.youtube.com/channel/UCVevO1TGto6jr8MygeFLfOg" target="_blank" class="social-icon si-dark si-colored si-youtube nobottommargin" style="margin-right: 10px;">
                                 <i class="icon-youtube"></i>
                                 <i class="icon-youtube"></i>
                             </a>
                         </div>
                         <div class="col-md-2 clearfix bottommargin-sm">
-                            <a href="https://plus.google.com/+ScrumupUa" class="social-icon si-dark si-colored si-gplus nobottommargin" style="margin-right: 10px;">
+                            <a href="https://plus.google.com/+ScrumupUa" target="_blank" class="social-icon si-dark si-colored si-gplus nobottommargin" style="margin-right: 10px;">
                                 <i class="icon-google-plus"></i>
                                 <i class="icon-google-plus"></i>
                             </a>
                         </div>
                         <div class="col-md-2 clearfix bottommargin-sm">
-                            <a href="https://twitter.com/scrum_up" class="social-icon si-dark si-colored si-twitter nobottommargin" style="margin-right: 10px;">
+                            <a href="https://twitter.com/scrum_up" target="_blank" class="social-icon si-dark si-colored si-twitter nobottommargin" style="margin-right: 10px;">
                                 <i class="icon-twitter"></i>
                                 <i class="icon-twitter"></i>
                             </a>
                         </div>
                         <div class="col-md-2 clearfix bottommargin-sm">
-                            <a href="https://www.linkedin.com/groups/4391763" class="social-icon si-dark si-colored si-linkedin nobottommargin" style="margin-right: 10px;">
+                            <a href="https://www.linkedin.com/groups/4391763" target="_blank" class="social-icon si-dark si-colored si-linkedin nobottommargin" style="margin-right: 10px;">
                                 <i class="icon-linkedin"></i>
                                 <i class="icon-linkedin"></i>
                             </a>

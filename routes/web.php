@@ -9,8 +9,6 @@ Route::group(['middleware' => 'web'], function () {
             Route::get('/{slug}', 'PostController@show');
         });
 
-//        Route::get('/blog/{slug}', 'PostController@show');
-
         Route::get('/', 'PagesController@getHome');
         Route::get('/home', 'HomeController@index');
 
@@ -45,7 +43,7 @@ Route::group(['middleware' => 'web'], function () {
             return view('pages.list-courses.list-courses');
         });
 
-        Route::get('course-scrum',  'PaymentsController@getPayments')->middleware('auth');
+        Route::get('course-scrum',  'SubscriptionController@getSubscription')->middleware('auth');
 
         Route::get('/coming-soon', function() {
             return view('pages.coming-soon.coming-soon');
@@ -66,7 +64,7 @@ Route::group(['middleware' => 'web'], function () {
         // Authentication Routes
         Auth::routes();
 
-        Route::post('/searching', 'SearchController@index');
+        //Route::post('/searching', 'SearchController@index');
 
 
 
