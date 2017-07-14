@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 //use App\Http\Requests;
 
-
-
+//Illuminate\Notifications\Notifiable;
+//use App\Notifications\MailNotification;
 use Mail;
 use Session;
-//require ('date_of_training/date_of_training');
+
 
 class mailController extends Controller
 {
@@ -21,6 +21,8 @@ class mailController extends Controller
               'template-contactform-name' => 'min:3',
               'template-contactform-phone' => 'required|min:4|numeric'
              ]);
+
+
 
         $name = isset( $_POST['template-contactform-name'] ) ? $_POST['template-contactform-name'] : '';
         $email = isset( $_POST['template-contactform-email'] ) ? $_POST['template-contactform-email'] : '';
@@ -42,9 +44,14 @@ class mailController extends Controller
 
             Mail::send('emails.contact',  $data, function($message)use ($data){
                     $message->from($data['email']);
-                    $message->to($data['email'])->cc('lesia@tridentsoftlab.com');
+                    $message->bcc(array($data['email'], 'lesia@tridentsoftlab.com', 'aleksia.2010@mail.ru'));
                     $message->subject($data['subject']);
         });
+
+//        Notification::send($data['email'], new MailNotification());
+
+
+//        $data['email']->toMail();
 
         Session::flash('success', 'Your email was sent!');
 
