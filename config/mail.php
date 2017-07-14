@@ -57,8 +57,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'oles.ivanenko@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@scrummaster.com.ua'),
+        'name' => env('MAIL_FROM_NAME', 'scrummaster'),
     ],
 
     /*

@@ -27,6 +27,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function subcription(){
+        return $this->hasMany('App\Subscriptions', 'user_id', 'id');
+    }
 }
 
 

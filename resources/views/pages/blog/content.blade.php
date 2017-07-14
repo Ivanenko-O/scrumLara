@@ -83,6 +83,7 @@
 
                             <div class="tab-container">
                                 @include("partials.right-widget-blog")
+                                @include("partials.right-widget-event")
                             </div>
                         </div>
                     </div>
